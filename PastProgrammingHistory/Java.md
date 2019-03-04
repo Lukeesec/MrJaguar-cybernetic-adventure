@@ -8,13 +8,13 @@ I was able to learn alot in those 28 hours though.
 
 # The stuff I learned in the course
 
-Variables, Datatypes and Operators
-Java Tutorial: Expressions, Statements, Code blocks, Methods
-Control Flow Statements
-OOP Part 1 - Classes, Constructors and Inheritance
-OOP Part 2 - Composition, Encapsulation, and Polymorphism
-Arrays, Java inbuilt Lists, Autoboxing and Unboxing
-Inner and Abstract Classes & Interfaces
+Variables, Datatypes and Operators |
+Java Tutorial: Expressions, Statements, Code blocks, Methods |
+Control Flow Statements |
+OOP Part 1 - Classes, Constructors and Inheritance |
+OOP Part 2 - Composition, Encapsulation, and Polymorphism |
+Arrays, Java inbuilt Lists, Autoboxing and Unboxing |
+Inner and Abstract Classes & Interfaces |
 Java Generics
 
 # Will update more later
