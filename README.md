@@ -1,4 +1,4 @@
-# Helpfull info.
+# Helpful info.
 
 I want to become a cyber security specialist. So this github repo is just the documentation of my adventure.
 
