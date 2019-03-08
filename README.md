@@ -1,4 +1,4 @@
-# Helpful info.
+# Helpful info. P.S | For the pico series I start explaining how I did stuff starting in the challenge Logan onwards
 
 I want to become a cyber security specialist. So this github repo is just the documentation of my adventure.
 
