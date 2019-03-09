@@ -1,0 +1,1 @@
+Write it all out.. This one is a confusing problem. Just write it out and try to wrap our head around it.. You do not need Python but it could make life much easier. But by the time you finish the python script you could've most likly finished the challenge
