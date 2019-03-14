@@ -9,7 +9,7 @@ I started by running the file and entering in a bunch of A's and once I pushed e
 the return address with a bunch of A's (hex value 41). Now to find exactly how many chars will overflow the program, and that value is 44. Next part is to grab the win address and put that at the end of the 44
 A's. Well this is where I was wrong, I needed to first use pwntools, to convert the win address to little endian since that's how a cpu reads data. Snippit **from pwn import * p32(win address)** that will
 give is the little endian version of the return address. Next thing to do is use python to pipe 44 A's and the little endian version of the win address to the program. The code for that is --
-** python -c "print 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' + '\xcb\x85\x04\x08' " | ./vuln **
+**python -c "print 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' + '\xcb\x85\x04\x08' " | ./vuln**
 
 # Flag
 picoCTF{addr3ss3s_ar3_3asy56a7b196}
