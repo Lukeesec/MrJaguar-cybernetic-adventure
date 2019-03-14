@@ -9,6 +9,6 @@ The first thing I can recommend is find a good community. Discord is a very good
 # Useful commands/debuggers for reverse engineering
 Debuggers | radare2 and gdb are the best: radare2 has a sharp learning curve but is better overall.
 
-ltrace will trace libraries (ltrace ./runnable)
+ltrace will trace libraries (ltrace ./runnable). 
 strace will trace functions and such. (strace ./runnable)
 
