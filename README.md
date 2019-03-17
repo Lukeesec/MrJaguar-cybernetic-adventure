@@ -11,7 +11,7 @@ https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w (LiveOverFlow)
 
 **Good sites to learn about hacking**
 
-> These two sites are very noob friendly.  
+These two sites are very noob friendly.  
 https://2018game.picoctf.com/news  
 http://overthewire.org/wargames/
 
