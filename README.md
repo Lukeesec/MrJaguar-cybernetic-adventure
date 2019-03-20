@@ -1,5 +1,5 @@
 ## This README.md will have a bunch of useful info and tips.
-
+**I should say this at the start, this repo isn't really mean't to be used as "how to solve a specified challenge", this repo is my adventure learning to hack, and my half assed explantions on how I solved a certain problem.** 
 ### Stuff that has helped me and is helping me get to where I want to be
 
 **The first thing I can recommend is find a good community, discord is a very good place to find amazing communities of programmers, here are a few youtubers/discords.**
