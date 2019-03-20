@@ -1,0 +1,86 @@
+Assembly break down
+
+Some people can have reallllllly long names you know  
+Are all the system calls being used safely?  
+nc 2018shell.picoctf.com 23685  
+I need to somehow leak the contents of password.txt
+The only thing we can “overflow” is enter your name function
+
+Unsafe C functions in the program
+
+Strcat - The C library function char *strcat(char *dest, const char *src) appends the string pointed to by src to the end of the string pointed to by dest.
+
+strcat(name, ",\nPlease Enter the Password.");
+char name[256];
+
+There’s no if statement to check if name is the right size, so we can buffer overflown.
+
+Results / testing
+
+I entered in 255 A’s and was not able to enter in a password.. It just said incorrect instantly, by entering in 254 A’s all works as it should.
+
+Aftering entering in a average name len and a average password len here is my ‘dr’ results
+
+eax = 0xffffffda  
+ebx = 0x00000000  
+ecx = 0x00000000  
+edx = 0xf7f7289c  
+esi = 0xf7f6f200  
+edi = 0x00000000  
+esp = 0xffaaa9dc  
+ebp = 0xf7f71000  
+eip = 0xf7f9b079  
+eflags = 0x00000282  
+oeax = 0x000000fc  
+
+Now after entering in 260 A’s
+
+eax = 0xffffffda  
+ebx = 0x00000000  
+ecx = 0x00000000  
+edx = 0xf7f1289c  
+esi = 0xf7f0f200  
+edi = 0x00000000  
+esp = 0xff97099c  
+ebp = 0xf7f11000  
+eip = 0xf7f3b079  
+eflags = 0x00000286  
+oeax = 0x000000fc  
+
+There was one difference esp. Now to enter in a normal len name and 70 A’s in password input
+
+eax = 0xffffffda  
+ebx = 0x00000000  
+ecx = 0x00000000  
+edx = 0xf7f4c89c  
+esi = 0xf7f49200  
+edi = 0x00000000  
+esp = 0xffea38ec  
+ebp = 0xf7f4b000  
+eip = 0xf7f75079  
+eflags = 0x00000286  
+oeax = 0x000000fc  
+
+Test aftering entering in 150 A’s instead of 70
+
+eax = 0xffffffda  
+ebx = 0x00000000  
+ecx = 0x00000000  
+edx = 0xf7f7689c  
+esi = 0xf7f73200  
+edi = 0x00000000  
+esp = 0xffb9b18c  
+ebp = 0xf7f75000  
+eip = 0xf7f9f079  
+eflags = 0x00000282  
+oeax = 0x000000fc  
+
+Doesn’t seem like there’s any differences
+
+Important addresses in order
+
+
+Je 0x804879f ; comparing local_10h to 0
+Jne 0x80488a8 ;if eax,eax is equal then call flag if not print incorrect password (s1,s2)
+Jne 0x8048830 ;irrelevant
+
