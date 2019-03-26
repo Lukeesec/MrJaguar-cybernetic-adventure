@@ -1,0 +1,78 @@
+Sym.do_magic (In order)
+
+0x0804867a jne 0x8048696  
+This checks if local_ch  is equal to 0 and if it is then  the output “out of memory” will be shown and the program will exit
+
+0x080486bb jmp 0x804870b
+Just jumps to the address chosen
+
+ jl 0x80486bd
+Jump if eax is less then local_10hr,  we want this to be true if its false the program will just exit the set of instructions
+
+jne 0x80486ef
+Jump if al is not equal to byte, this is a important jump sorta, if the jump does doesn’t happen you can still be the ‘winner” Lets start with “if al is not equal to byte then jump”.
+
+The jump will bring is to the address “0x80486ef” and will jump “if local_1ch is not equal to 0x19 (25)” We don’t want this jump to happen, if it happens then the program will restart, HUH?
+If there isn’t a jump then we get the output “You are the winner” and the program will end.
+
+Now to see what happens “if al is equal to byte then don’t jump”. One important thing happens, “add 1 to local_1ch” then it goes the the address “0x80486ef” and does exactly what I said in the above paragraph.
+
+add eax, obj.sekrutBuffer
+Whatever value obj.sekrutBuffer is gets added to eax every loop
+
+ Output from running the program 
+
+When running the program and entering in a random char I get the output “thats all folks”, and if I enter nothing and exit I receive the output, “no line read…”
+
+“Sym.do_magic” is the only important part of this program, somehow that set of instructions checks the input and compares it to something then outputs winner or it just “exits’ returns back to the main set of instructions to “wrap” up the program.
+
+Notes
+
+A XOR B in english would be translated as "are A and B not equal". So xor ax, ax will set ax to zero since ax is always equal to itself.
+
+“so you have the secret string which is somewhere split up in memory and it gets pulled out by the loop with the sekrutbuffer thingy. then it does a xor with the welcome message like literally the string. that byte it get out of it gets compared with the first byte of your input and that again and again. (iterating over an "array" which is a "secret string" It compares it byte by byte and does a xor with the welcome message. If you do that you get the flag. (you need to write a python program)” ~ WhiteHood
+
+Var_1ch is a important variable, its the variable that gets compared to 0x19 and if they are not equal then jump.. We obviously want them to be equal so we can be the “winner”, so I need to track var_1ch and see what happens to it.
+
+In the sym.do_magic theres a loop that loops however many chars you enter, so if I enter in “lu” it will run through like normal once then loop twice and exit. 
+
+cmp  eax, dword [local_10h] (cutter version is size instead of local_10h) decides when the loop ends, I think size is the size of the char I entered in the program at the start.
+So each loop through 1 gets added to local_18h then local 18hr gets moved into eax and then compared to local_10h (our input size)
+
+(first pass)
+Before xor eax,ecx
+eax = 0x0000006c
+ecx = 0x00000029
+After
+eax = 0x00000045
+ecx = 0x00000029
+
+The most important jump is “jne 0x8048707;[gn]” it will either loop through the program again or give us the str “you are winner” and it will exit. Local_1ch is getting compared to 0x19 which is 25. The only way we can get local_1ch to 25 is to figure out how to make the jump “jne 0x80486ef” equal so that it goes to the address “0x80486eb” and adds one to local_1ch.
+
+
+
+
+
+
+Next thing to figure out is how to make “cmp al, byte [local_1dh” equal.
+The two places that al is used -   
+cmp  al, byte [var_1dh]  
+mov  byte [var_1dh], al  
+
+EAX is the full 32-bit value AX is the lower 16-bits AL is the lower 8 bits AH is the bits 8 through 15 (zero-based)
+
+
+mov byte [local_1dh], al 
+cmp al, byte [local_1dh]
+
+al is the just the lower 8 bits of the eax register, which is also equal to 1 byte. the instruction moves whatever is stored in al into a byte variable in address [local_1dh] then it compares whether it's the same byte
+
+What is movxz, possible answers -
+
+movzx expands a byte or word to a full dword:
+movzx ecx, ax  ->contents of ax will be in cx now, higher bytes of ecx are zeroed
+movzx edx, bl  ->contents of bl will be in dl now, the three highest bytes of edx are zeroed
+movzx eax, byte ptr SomeGlobalDword ->contents of lowest byte will be in al now, higher bytes are zeroed
+
+movsx ecx, al  -> contents of al will be in cl now, the three highest bytes of ecx are zeroed or -1, depending on sign of al
+
