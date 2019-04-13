@@ -11,4 +11,5 @@ at the program start. So if I entered in LU then the program would run through o
 
 The exploit.py just takes the greeting message and the xor data (obj.sekrutbuffer), then xor's it and stores it in "flag", then once the loop ends; prints flag.
 # Flag
+
 picoCTF{qu4ckm3_35246994}
