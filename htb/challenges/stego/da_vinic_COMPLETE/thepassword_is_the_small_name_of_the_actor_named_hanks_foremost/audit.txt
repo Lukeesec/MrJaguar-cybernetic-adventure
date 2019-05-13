@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat May 11 11:31:13 2019
+Invocation: foremost Thepassword_is_the_small_name_of_the_actor_named_Hanks.jpg -o thepassword_is_the_small_name_of_the_actor_named_hanks_foremost 
+Output directory: /root/repos/hack_the_box/stego/da_vinic/thepassword_is_the_small_name_of_the_actor_named_hanks_foremost
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: Thepassword_is_the_small_name_of_the_actor_named_Hanks.jpg
+Start: Sat May 11 11:31:13 2019
+Length: 37 KB (38702 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.jpg 	      37 KB 	          0 	 
+Finish: Sat May 11 11:31:13 2019
+
+1 FILES EXTRACTED
+	
+jpg:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat May 11 11:31:13 2019

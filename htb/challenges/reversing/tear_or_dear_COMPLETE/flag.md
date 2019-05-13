@@ -1,0 +1,2 @@
+# Solution
+I had to do this on windows using dnspy, the pass and user were in the signup forum. I just had to run the program in debug mode using dnspy 32 bit, and break at the checks for user and password.
