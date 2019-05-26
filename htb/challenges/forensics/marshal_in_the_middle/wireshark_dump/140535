@@ -1,0 +1,2782 @@
+<!DOCTYPE html>
+<html >
+<head>
+  
+      <!-- Chartbeat top START -->
+        <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+      <!-- Chartbeat top END -->
+    
+
+  <script type="text/javascript">
+  if(typeof String.prototype.trim !== 'function') {
+    String.prototype.trim = function() {
+      return this.replace(/^\s+|\s+$/g, '');
+    }
+  }
+
+  function hasCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+      var c = ca[i].trim();
+      if (c.indexOf(name)==0) return true;
+    }
+    return false;
+  }
+
+  function deleteCookie(cname) {
+    //set to a past expiration to delete cookie
+    setCookie(cname, "delete", -2);
+  }
+
+  function setCookie(cname,cvalue,exdays) {
+    if (typeof exdays != "undefined") {
+      var d = new Date();
+      d.setTime(exdays);
+      var expires = "expires="+d.toGMTString();
+      document.cookie = cname + "=" + cvalue + "; " + expires + "; path=/";
+    } else {
+      document.cookie = cname + "=" + cvalue + "; path=/";
+    }
+  }
+
+  function getCookie(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for(var i=0; i<ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0)==' ') c = c.substring(1);
+          if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
+      }
+      return "";
+  }
+</script>
+
+  <script type="text/javascript">
+    
+    var GEMG = GEMG || {};
+    GEMG.CDN_URL = 'http://cdn.defenseone.com/a/';
+    GEMG.NON_CDN_STATIC_URL = '/static/a/';
+</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script type="text/javascript">
+
+  var Govexec = Govexec || {};
+  Govexec.ie_lte_8 = (function(){
+    var div = document.createElement('div');
+    div.innerHTML = '<!--[if lte IE 8]><i></i><![endif]-->';
+    return div.getElementsByTagName('i').length > 0;
+  })();
+
+  /**
+   * This function finds the viewport size with scrollbar included.
+   * This matches the behavior of the media queries being used.
+   */
+  function viewport() {
+      var e = window, a = 'inner';
+      if (!('innerWidth' in window )) {
+          a = 'client';
+          e = document.documentElement || document.body;
+      }
+      return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+  }
+  Govexec.get_format = function(){
+    var w;
+
+    if (Govexec.ie_lte_8) {
+      return "desktop";
+    }
+
+    w = viewport().width;
+    if (w > 1024)
+    {
+        return "desktop";
+    }
+    else if (w > 720)
+    {
+        return "tablet";
+    }
+    else
+    {
+        return "mobile";
+    }
+  }
+  window.previous_viewport = Govexec.get_format();
+</script>
+
+  
+    <script type="text/javascript">
+      (function() {
+        var currentDate, eod, host_tmp;
+        var isFb = navigator.userAgent.match(/facebookexternalhit/i) !== null;
+        
+          var suppressWelcomeAd = false;
+        
+
+        if (isFb || hasCookie("welcomeAdViewed"))	{
+          return;
+        }
+
+        setCookie("cookiesEnabled", "1");
+        if (!hasCookie("cookiesEnabled"))	{
+          return;
+        }
+        deleteCookie("cookiesEnabled");
+
+        currentDate = new Date();
+        eod = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), 23, 59, 0, 0);
+        setCookie("welcomeAdViewed", "1", Math.round((eod.getTime())));
+
+        if (!suppressWelcomeAd && (Govexec.get_format() === "desktop")) {
+          // Set cookie with referrer for Omniture script to use
+          if (document.referrer === "") {
+            setCookie("referrer:" + window.location, "Typed/Bookmarked");
+          }
+          else {
+            // trick for getting the hostname
+            host_tmp = document.createElement("a");
+            host_tmp.href = document.referrer;
+
+            setCookie("referrer:" + window.location, host_tmp.hostname);
+          }
+          window.location = 'http://cdn.defenseone.com/a/defenseone/interstitial.html?v=7.7.1&rf=' + encodeURIComponent(window.location);
+        }
+      })();
+    </script>
+  
+
+  <script type="text/javascript" src="//use.typekit.net/kbf6vuq.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="apple-itunes-app" content="app-id=758349913, app-argument=http://www.defenseone.com/politics/2017/08/trump-cybersecurity-advisers-resign-moral-protest/140535/">
+
+  <meta property="article:publisher" content="http://www.facebook.com/DefenseOne" />
+  <meta property="fb:admins" content="1563600116" />
+  <meta property="og:site_name" content="Defense One" />
+
+  <title>Trump Cybersecurity Advisers Resign In &#39;Moral&#39; Protest - Defense One</title>
+
+  
+
+  
+    
+        <link rel="canonical" href="http://www.nextgov.com/cybersecurity/2017/08/trumps-lack-moral-infrastructure-causes-cyber-advisers-resign/140512/" />
+    
+
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+
+  
+  
+    <meta name="pubdate" content="2017-08-25T15:37:27+00:00"/>
+  
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Trump Cybersecurity Advisers Resign In &#39;Moral&#39; Protest" />
+  <meta property="og:url" content="http://www.defenseone.com/politics/2017/08/trump-cybersecurity-advisers-resign-moral-protest/140535/" />
+  <meta property="og:description" content="Board members also condemned the president’s response to racist violence in Charlottesville, Va." />
+  <meta property="og:image" content="http://cdn.defenseone.com/media/img/upload/2017/08/25/T-dizzle/open-graph.jpg" />
+
+  
+  <meta name="twitter:description" content="Board members also condemned the president’s response to racist violence in Charlottesville, Va.">
+  
+  <meta name="twitter:image" content="http://cdn.defenseone.com/media/img/upload/2017/08/25/T-dizzle/open-graph.jpg">
+  
+  <meta name="twitter:title" content="Trump Cybersecurity Advisers Resign In &#39;Moral&#39; Protest">
+  
+  <meta name="twitter:site" content="@defenseone">
+  
+  <meta name="twitter:creator" content="@Joseph_Marks_">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  
+
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=696264563763622&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+    <link media="all" rel="stylesheet" type="text/css" href="http://cdn.defenseone.com/a/social_tools/css/social_tools.css?v=7.7.1" />
+    <link media="all" rel="stylesheet" type="text/css" href="http://cdn.defenseone.com/a/social_tools/css/social_tools_small_logo.css?v=7.7.1" />
+
+
+
+  <meta name="description" content="Board members also condemned the president’s response to racist violence in Charlottesville, Va." />
+  
+  
+<meta name="sailthru.author" content="Joseph Marks"/>
+<meta name="sailthru.date" content="2017-08-25T15:37:27Z"/>
+<meta name="sailthru.description" content="Board members also condemned the president’s response to racist violence in Charlottesville, Va."/>
+<meta name="sailthru.title" content="Trump Cybersecurity Advisers Resign In &#39;Moral&#39; Protest"/>
+<meta name="sailthru.tags" content="channel-politics,type-story,length-medium,site-defenseone"/>
+<meta name="sailthru.images.full" content="http://cdn.defenseone.com/media/img/upload/2017/08/25/T-dizzle.jpg"/>
+<meta name="sailthru.images.thumb" content="http://cdn.defenseone.com/media/img/upload/2017/08/25/T-dizzle/sailthru-thumbnail.jpg"/>
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Defense One" href="http://www.defenseone.com/rss/all/" />
+
+  
+<script type="text/javascript">
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement("script");
+    gads.async = true;
+    gads.type = "text/javascript";
+    var useSSL = "https:" == document.location.protocol;
+    gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+    var node =document.getElementsByTagName("script")[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+
+  var GEMG = GEMG || {};
+  (function(){
+    GEMG.GPT = {
+      ad_unit: '/617/defenseone.com/section_politics/content/pid_140535',
+      base_ad_unit: '/617/defenseone.com',
+      targeting: {
+        page: {
+          
+          'topics': ['cyber','white-house'],
+          
+          'post_id': ['140535'],
+          
+          'primary_category': ['politics'],
+          
+          'referring_domain': ['www.reddit.com']
+          
+        },
+        slot: {}
+      }
+    };
+  })();
+</script>
+
+
+  <script type="text/javascript">
+  var GEMG = GEMG || {};
+  GEMG.OmnitureConfig = {"internalDomains": "www.defenseone.com", "account": "atlanticDefenseOne2013Prod", "trackingServer": "metrics.govexec.com", "site": "www.defenseone.com"};
+  </script>
+
+  <script type="text/javascript" src="http://cdn.defenseone.com/a/compressed/jinja/js/eb79f99b280c.js"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:300,400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://cdn.defenseone.com/a/compressed/jinja/css/defenseone-806486705cc8.css" type="text/css" media="all" /><link rel="stylesheet" href="http://cdn.defenseone.com/a/compressed/jinja/css/defenseone-86d9b93c9f49.css" type="text/css" media="only screen and (max-width: 720px)" /><link rel="stylesheet" href="http://cdn.defenseone.com/a/compressed/jinja/css/defenseone-86d9b93c9f49.css" type="text/css" media="only screen and (-webkit-min-device-pixel-ratio : 1.5) and (min-device-pixel-ratio : 1.5)" /><link rel="stylesheet" href="http://cdn.defenseone.com/a/compressed/jinja/css/defenseone-e430a1c5b6a9.css" type="text/css" media="only screen and (min-width: 721px) and (max-width: 1024px)" /><link rel="stylesheet" href="http://cdn.defenseone.com/a/compressed/jinja/css/defenseone-1e9494fed382.css" type="text/css" media="all" /><link rel="stylesheet" href="http://cdn.defenseone.com/a/compressed/jinja/css/defenseone-140a53b61f23.css" type="text/css" media="only screen and (min-width: 1025px)" /><link rel="stylesheet" href="http://cdn.defenseone.com/a/compressed/jinja/css/defenseone-714e229b1031.css" type="text/css" media="all" />
+  <!--[if lt IE 9]>
+		<script type="text/javascript" src="http://cdn.defenseone.com/a/defenseone/js/html5shiv.js"></script>
+    <link rel="stylesheet" href="http://cdn.defenseone.com/a/compressed/jinja/css/defenseone-0aa0c5cc475e.css" type="text/css" />
+		<script type="text/javascript">
+			$('#slides').hide();
+			$('#slides2').show();
+		</script>
+		<![endif]-->
+  <!--link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 320px) and (max-device-width: 480px)" href="css/mobile.css" />
+     <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 600px) and (max-device-width: 1024px)" href="css/tablet.css" />
+     <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 1024px)" href="css/960.css" />
+     <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 1024px)" href="css/styles.css" /-->
+
+  
+  <!-- Chartbeat bottom START -->
+<script type="text/javascript">
+  var _sf_async_config={};
+  _sf_async_config.uid = 17396;
+  _sf_async_config.domain = "defenseone.com";
+  
+    _sf_async_config.path = "/politics/2017/08/trump-cybersecurity-advisers-resign-moral-protest/140535/";
+  
+  
+  (function(){
+    function loadChartbeat() {
+      window._sf_endpt=(new Date()).getTime();
+      var e = document.createElement("script");
+      e.setAttribute("language", "javascript");
+      e.setAttribute("type", "text/javascript");
+      e.setAttribute("src", "//static.chartbeat.com/js/chartbeat.js");
+      document.body.appendChild(e);
+    }
+    var oldonload = window.onload;
+    window.onload = (typeof window.onload != "function") ?
+    loadChartbeat : function() { oldonload(); loadChartbeat(); };
+  })();
+</script>
+<!-- Chartbeat bottom END -->
+
+
+
+  <script type="text/javascript">
+   //<![CDATA[
+     var facebookXdReceiverPath = 'http://www.govexec.com/xd_receiver.htm';
+  //]]>
+  </script>
+  <script type="text/javascript" src="http://cdn.defenseone.com/a/js/adframe.js"></script>
+  
+    <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-395628-5', 'auto');
+  
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+  
+
+  
+  <script type="text/javascript">
+  __reach_config = {
+    authors: ['Joseph Marks'],
+    channels: ['Defense One','Defense One::Politics'],
+    
+    date: '2017-08-25T15:37:27Z',
+    
+    iframe: true,
+    pid: '53ea3bd297b0c940ae000041',
+    tags: ['Defense One','Defense One::Politics'],
+    title: 'Trump Cybersecurity Advisers Resign In \u0027Moral\u0027 Protest \u002D Defense One',
+    url: 'http://www.defenseone.com/politics/2017/08/trump-cybersecurity-advisers-resign-moral-protest/140535/',
+    domain: 'www.defenseone.com',
+    ignore_errors: false
+  };
+  (function(){
+    var s = document.createElement('script');
+    s.async = true;
+    s.type = 'text/javascript';
+    s.src = document.location.protocol + '//d8rk54i4mohrb.cloudfront.net/js/reach.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(s);
+  })();
+</script>
+  
+
+<script id="peer39ScriptLoader" type="text/javascript" src="http://stags.peer39.net/1406/trg_1406.js"></script>
+  <!-- peer39 code -->
+
+
+  <!-- stupid hack for IE10/tablet -->
+  <style type="text/css">
+  a img {border:none}
+  </style>
+
+  
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '10155007044873614'); 
+fbq('track', 'PageView');
+
+
+
+
+
+</script>
+<noscript>
+ <img height="1" width="1" src="https://www.facebook.com/tr?id=10155007044873614&ev=PageView&noscript=1" style="display: none;"/>
+</noscript>
+
+
+</head>
+
+
+
+<body class="no-js no-touch d1 d1-article-page articlepage" ontouchstart="">
+  <script>
+    
+    document.body.className = document.body.className.replace("no-js ","");
+  </script>
+
+<script type="text/javascript">
+//<![CDATA[
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+s.server="www.defenseone.com"
+s.channel="politics"
+s.pageName="trump cybersecurity advisers resign in moral protest - politics - joseph marks"
+s.prop1=""
+s.prop2=""
+s.prop3="trump cybersecurity advisers resign in moral protest - politics - joseph marks"
+s.prop4="/politics/2017/08/trump-cybersecurity-advisers-resign-moral-protest/140535/"
+s.prop5=""
+s.prop6="politics"
+s.prop7=""
+s.prop8="politics - post"
+s.prop9=""
+s.prop10=""
+s.prop11="11:00"
+s.prop12="Friday"
+s.prop13="weekday"
+s.prop14=""
+s.prop15="joseph marks"
+s.prop16=""
+s.prop17="Trump Cybersecurity Advisers Resign In &#39;Moral&#39; Protest"
+s.prop18="august 25, 2017 11:37 am"
+s.prop19=""
+s.prop20="cyber, white-house"
+s.prop21=""
+s.prop22=""
+s.prop23=""
+s.prop24=""
+s.prop25=""
+s.prop26=""
+s.prop27=""
+s.prop32="False"
+s.prop34="140535"
+s.prop35="25"
+s.prop36="08"
+s.prop37="2017"
+s.prop38=""
+s.prop39="Error: not set"
+s.prop44=""
+s.hier1="politics/post/trump cybersecurity advisers resign in moral protest"
+s.hier2=""
+s.hier3=""
+
+if ((typeof(Govexec) != "undefined") && (typeof(Govexec.get_format)=== 'function')){
+  s.prop38 = Govexec.get_format();
+}
+
+if (typeof(adblock) != 'undefined' && adblock) {
+  s.prop32 = "True";
+}
+
+// Collect referrer; override omniture referrer; clear cookie
+var referrerCookieName = "referrer:" + window.location;
+var referredThroughInterstitial = document.referrer.indexOf("interstitial.html") > -1;
+s.prop50 = (referredThroughInterstitial) ? "true" : "false";
+if (referredThroughInterstitial) {
+  if (hasCookie(referrerCookieName)) {
+    var originalReferrer = getCookie(referrerCookieName);
+
+    // Might be Typed/Bookmarked or Referrer (see layout file)
+    s.prop39 = originalReferrer;
+  } else {
+    // Referrer cookie lost
+    s.prop39 = "Referrer Lost"
+  }
+} else {
+  // Not routed through interstitial
+  if (document.referrer != "") {
+    // Not routed through interstitial; set prop39 to standard referrer
+
+    // trick for getting the hostname
+    var host_tmp = document.createElement("a");
+    host_tmp.href = document.referrer;
+
+    s.prop39 = host_tmp.hostname;
+  } else {
+    // No referrer; URL was directly entered / bookmarked
+    s.prop39 = "Typed/Bookmarked";
+  }
+}
+
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code) document.write(s_code)
+if(navigator.appVersion.indexOf('MSIE')>=0) document.write(unescape('%3C')+'\!-'+'-');
+//]]>
+</script> 
+<noscript>
+	<div>
+		<a href="http://www.omniture.com" title="Web Analytics" ><img
+src="http://metrics.govexec.com/b/ss/atlanticDefenseOne2013Prod/1/H.17--NS/0"
+height="1" width="1" alt="" /></a>
+	</div>
+</noscript>
+<!--/DO NOT REMOVE/-->
+
+
+
+<div class="d1-top-ad hidedesk hidemobile">
+  
+  <div
+    
+    class="ad ad-topleader"
+  >
+    <div class="ad-container">
+      
+        
+          <div
+            
+              class="hidedesk hidemobile"
+            
+          >
+            
+    
+      <script
+        class="ad-stub ad-stub-tablet"
+        data-ad-unit="/617/defenseone.com/section_politics/content/pid_140535"
+        data-ad-sizes="728x90,728x300,970x250"
+        
+          data-ad-size-mapping="tablet_top_ad"
+        
+        
+        
+          data-ad-targeting='001883a9-b159-4a59-9240-5def35050c01'
+        
+        
+      >
+      
+        GEMG.GPT.targeting.slot['001883a9-b159-4a59-9240-5def35050c01'] = {
+        
+          'pos': [
+            'topleader'
+          ],
+        
+          'level': [
+            '0'
+          ]
+        
+        };
+      
+      </script>
+    
+  
+          </div>
+        
+      
+      
+          
+    
+      <noscript class="ad-noscript">
+        
+          <a href="http://pubads.g.doubleclick.net/gampad/jump?sz=728x300%7C728x90%7C970x250&amp;c=708666791&amp;iu=%2F617%2Fdefenseone.com%2Fsection_politics%2Fcontent%2Fpid_140535&amp;t=noscript%3Dtrue%26referring_domain%3Dwww.reddit.com%26pos%3Dtopleader%26level%3D0">
+            <img src="http://pubads.g.doubleclick.net/gampad/ad?sz=728x300%7C728x90%7C970x250&amp;c=708666791&amp;iu=%2F617%2Fdefenseone.com%2Fsection_politics%2Fcontent%2Fpid_140535&amp;t=noscript%3Dtrue%26referring_domain%3Dwww.reddit.com%26pos%3Dtopleader%26level%3D0"/>
+          </a>
+        
+      </noscript>
+    
+  
+      
+    </div>
+  </div>
+
+
+</div>
+
+
+  <header>
+    <div class="container_12">
+      <div id="slides2" class="grid_12 hidetablet hidemobile slidecontainer">
+        <div id="slideContainer2" class="swipe">
+          
+  
+      
+      
+  
+
+  <ul class="swipe-wrap">
+  
+  
+
+      
+
+      
+      <li class="grid_2 alpha">
+          <a href="/business/2017/08/global-business-brief-august-24-2017/140485/?oref=d-skybox"
+             
+          >
+
+              <div><img src="http://cdn.defenseone.com/media/img/upload/2017/08/24/GBB_header/defense-skybox.jpg" alt="" title=""></div>
+              <span><span class="caps">THIS</span> <span class="caps">WEEK</span>: The Pentagon’s nuke deals and Northrop; Q&A with Erik Prince; and more.</span>
+          </a>
+      </li>
+      
+
+      
+  
+
+      
+
+      
+      <li class="grid_2">
+          <a href="/threats/2017/08/how-us-can-pressure-pakistan/140511/?oref=d-skybox"
+             
+          >
+
+              <div><img src="http://cdn.defenseone.com/media/img/upload/2017/08/24/AP_17115264465057/defense-skybox.jpg" alt="Pakistani paramilitary troops take position during a gunbattle with militants in Karachi, Pakistan in April." title="Pakistani paramilitary troops take position during a gunbattle with militants in Karachi, Pakistan in April."></div>
+              <span>How the <span class="caps">US</span> Can Pressure Pakistan</span>
+          </a>
+      </li>
+      
+
+      
+  
+
+      
+
+      
+      <li class="grid_2">
+          <a href="/threats/2017/08/are-restrictions-keeping-us-winning-afghanistan/140463/?oref=d-skybox"
+             
+          >
+
+              <div><img src="http://cdn.defenseone.com/media/img/upload/2017/08/23/AP_17233484660117/defense-skybox.jpg" alt="Afghan National Army soldiers stand guard at a checkpoint on the outskirts of Kabul, Afghanistan, Monday, Aug. 21, 2017. Deep in the mountains of eastern Afghanistan, on the front lines against Taliban and Islamic State fighters." title="Afghan National Army soldiers stand guard at a checkpoint on the outskirts of Kabul, Afghanistan, Monday, Aug. 21, 2017. Deep in the mountains of eastern Afghanistan, on the front lines against Taliban and Islamic State fighters."></div>
+              <span>Are ‘Restrictions’ Keeping Us From Winning in Afghanistan? </span>
+          </a>
+      </li>
+      
+
+      
+  
+
+      
+
+      
+      <li class="grid_2">
+          <a href="/business/2017/08/us-air-force-orders-new-icbms/140405/?oref=d-skybox"
+             
+          >
+
+              <div><img src="http://cdn.defenseone.com/media/img/upload/2017/08/21/11593744315_df2ede19cd_k/defense-skybox.jpg" alt="An operational test launch of an unarmed Minuteman III intercontinental ballistic missile from Vandenberg Air Force Base, Calif., is seen from nearby Lompoc, California in September 2013." title="An operational test launch of an unarmed Minuteman III intercontinental ballistic missile from Vandenberg Air Force Base, Calif., is seen from nearby Lompoc, California in September 2013."></div>
+              <span><span class="caps">US</span> Air Force Orders New ICBMs</span>
+          </a>
+      </li>
+      
+
+      
+  
+
+      
+
+      
+      <li class="grid_2">
+          <a href="/politics/2017/08/trump-cybersecurity-advisers-resign-moral-protest/140535/?oref=d-skybox"
+             
+          >
+
+              <div><img src="http://cdn.defenseone.com/media/img/upload/2017/08/25/T-dizzle/defense-skybox.jpg" alt="President Donald Trump walks from Marine One across the South Lawn of the White House in Washington, Aug. 23, 2017." title="President Donald Trump walks from Marine One across the South Lawn of the White House in Washington, Aug. 23, 2017."></div>
+              <span>Trump Cybersecurity Advisers Resign In &#8216;Moral&#8217; Protest</span>
+          </a>
+      </li>
+      
+
+      
+  
+
+      
+      <li class="grid_2">
+          <a href="http://pubads.g.doubleclick.net/gampad/clk?id=4391390055&amp;iu=/617/defenseone.com/click-tracker"
+             class="sponsored"
+             
+                 target="_blank"
+             
+          >
+              <div><img src="http://cdn.defenseone.com/media/img/upload/2017/08/15/Screen_Shot_2017-08-15_at_6.32.28_PM/defense-skybox.png" alt="" title=""></div>
+              <div>Sponsor Content</div>
+              <span>3 Questions: Consumer Drones <span class="amp">&amp;</span> Security</span>
+          </a>
+
+          
+          <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/617/defenseone.com/tracking-pixel&amp;sz=1x1&amp;t=tracking-pixel%3D00387&amp;c=12345"
+              width="1"
+              height="1"
+              alt=""
+              class="tracking-pixel"
+          />
+          
+      </li>
+      
+      
+
+      
+
+      
+  
+  </ul>
+
+  <ul class="counter">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+  </ul>
+
+  <a class="button" href="javascript:;" ></a>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="d1-top-ad hidemobile hidetablet">
+      
+  <div
+    
+    class="ad ad-topleader"
+  >
+    <div class="ad-container">
+      
+        
+          <div
+            
+              class="hidetablet hidemobile"
+            
+          >
+            
+    
+      <script
+        class="ad-stub ad-stub-desktop"
+        data-ad-unit="/617/defenseone.com/section_politics/content/pid_140535"
+        data-ad-sizes="728x90,728x300,970x250"
+        
+        
+        
+          data-ad-targeting='d8bded0b-cf09-4b67-9961-df97884def9e'
+        
+        
+      >
+      
+        GEMG.GPT.targeting.slot['d8bded0b-cf09-4b67-9961-df97884def9e'] = {
+        
+          'pos': [
+            'topleader'
+          ],
+        
+          'level': [
+            '1'
+          ]
+        
+        };
+      
+      </script>
+    
+  
+          </div>
+        
+      
+      
+          
+    
+      <noscript class="ad-noscript">
+        
+          <a href="http://pubads.g.doubleclick.net/gampad/jump?tile=1&amp;sz=728x300%7C728x90%7C970x250&amp;c=537115495&amp;iu=%2F617%2Fdefenseone.com%2Fsection_politics%2Fcontent%2Fpid_140535&amp;t=noscript%3Dtrue%26referring_domain%3Dwww.reddit.com%26pos%3Dtopleader%26level%3D1">
+            <img src="http://pubads.g.doubleclick.net/gampad/ad?tile=1&amp;sz=728x300%7C728x90%7C970x250&amp;c=537115495&amp;iu=%2F617%2Fdefenseone.com%2Fsection_politics%2Fcontent%2Fpid_140535&amp;t=noscript%3Dtrue%26referring_domain%3Dwww.reddit.com%26pos%3Dtopleader%26level%3D1"/>
+          </a>
+        
+      </noscript>
+    
+  
+      
+    </div>
+  </div>
+
+
+    </div>
+    
+    <div class="d1-sticky-nav">
+  <div class="d1-sticky-nav-inner">
+    
+      <a class="d1-sticky-nav-logo logo" href="/?oref=d-logo">Defense One</a>
+    
+    <button class="d1-sticky-nav-opener d1-sticky-nav-opener-items">
+      <span class="d1-sticky-nav-opener-open-icon gemg-icon icon-ico-menu"></span>
+      <span class="d1-sticky-nav-opener-close-icon gemg-icon icon-ico-close"></span>
+    </button>
+    <button class="d1-sticky-nav-opener d1-sticky-nav-opener-search">
+      <span class="d1-sticky-nav-opener-search-icon gemg-icon icon-ico-search"></span>
+    </button>
+    
+      
+      <ul class="d1-sticky-nav-social">
+        
+        <li class="d1-sticky-nav-social-item d1-sticky-nav-social-facebook">
+          <a
+            class="d1-sticky-nav-social-link gemg-icon icon-ico-facebook"
+            href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fcdn.defenseone.com%2Fmedia%2Fimg%2Fupload%2F2017%2F08%2F25%2FT-dizzle%2Fopen-graph.jpg&redirect_uri=http%3A%2F%2Fwww.defenseone.com&link=http%3A%2F%2Fwww.defenseone.com%2Fpolitics%2F2017%2F08%2Ftrump-cybersecurity-advisers-resign-moral-protest%2F140535%2F&app_id=1546266055584988&display=popup"
+            target="_blank"
+          >
+            <span class="d1-sr-only">Facebook</span>
+          </a>
+        </li>
+        
+
+        
+        <li class="d1-sticky-nav-social-item d1-sticky-nav-social-twitter">
+          <a
+            class="d1-sticky-nav-social-link gemg-icon icon-ico-twitter"
+            href="https://twitter.com/share?url=http%3A%2F%2Fwww.defenseone.com%2Fpolitics%2F2017%2F08%2Ftrump-cybersecurity-advisers-resign-moral-protest%2F140535%2F&text=Trump+Cybersecurity+Advisers+Resign+In+%27Moral%27+Protest&via=defenseone"
+            target="_blank"
+          >
+            <span class="d1-sr-only">Twitter</span>
+          </a>
+        </li>
+        
+
+        
+        <li class="d1-sticky-nav-social-item d1-sticky-nav-social-linkedin">
+          <a
+            class="d1-sticky-nav-social-link gemg-icon icon-ico-linkedin"
+            href="http://www.linkedin.com/shareArticle?url=http%3A%2F%2Fwww.defenseone.com%2Fpolitics%2F2017%2F08%2Ftrump-cybersecurity-advisers-resign-moral-protest%2F140535%2F&mini=true&summary=Board+members+also+condemned+the+president%E2%80%99s+response+to+racist+violence+in+Charlottesville%2C+Va.&source=DefenseOne.com&title=Trump+Cybersecurity+Advisers+Resign+In+%27Moral%27+Protest"
+            target="_blank"
+          >
+            <span class="d1-sr-only">LinkedIn</span>
+          </a>
+        </li>
+        
+
+        
+        <li class="d1-sticky-nav-social-item d1-sticky-nav-social-email">
+          <a
+            class="d1-sticky-nav-social-link gemg-icon icon-ico-email-circle addthis_button_email"
+            href="#"
+            rel="nofollow"
+            title="Email this article"
+            addthis:title=""
+          >
+            <span class="d1-sr-only">Email</span>
+          </a>
+        </li>
+        
+
+      </ul>
+      
+    
+    <div class="d1-sticky-nav-clipper d1-sticky-nav-search-clipper">
+      <form id="search" class="d1-sticky-nav-search" action="/search/">
+        <span class="d1-sticky-nav-search-icon-container">
+          <span class="d1-sticky-nav-search-icon gemg-icon icon-ico-search" aria-hidden="true"></span>
+        </span>
+        <input class="d1-sticky-nav-search-text" type="text" value="Search..." name="q" autocomplete="off"/>
+        <button class="d1-sticky-nav-search-submit" type="submit">
+          <span class="d1-sticky-nav-search-submit-icon">&rarr;</span>
+        </button>
+      </form>
+    </div>
+    <div class="d1-sticky-nav-clipper d1-sticky-nav-items-clipper">
+      <nav class="d1-sticky-nav-items-container">
+        <ul class="d1-nav-items">
+  <li class="d1-nav-item ">
+    <a class="d1-nav-item-link" href="/news/?oref=d-nav">News</a>
+  </li>
+  <li class="d1-nav-item ">
+    <a class="d1-nav-item-link" href="/threats/?oref=d-nav">Threats</a>
+  </li>
+  <li class="d1-nav-item highlighted">
+    <a class="d1-nav-item-link" href="/politics/?oref=d-nav">Politics</a>
+  </li>
+  <li class="d1-nav-item ">
+    <a class="d1-nav-item-link" href="/business/?oref=d-nav">Business</a>
+  </li>
+  <li class="d1-nav-item ">
+    <a class="d1-nav-item-link" href="/technology/?oref=d-nav">Tech</a>
+  </li>
+  <li class="d1-nav-item last">
+    <a class="d1-nav-item-link" href="/ideas/?oref=d-nav">Ideas</a>
+  </li>
+</ul>
+      </nav>
+    </div>
+  </div>
+</div>
+  </header>
+
+
+<div id="outer_content_container">
+  
+  <div id="gutter" class="hidetablet hidemobile">
+    
+  <div
+    
+    class="ad ad-gutter"
+  >
+    <div class="ad-container">
+      
+        
+          <div
+            
+              class="hidetablet hidemobile"
+            
+          >
+            
+    
+      <script
+        class="ad-stub ad-stub-desktop"
+        data-ad-unit="/617/defenseone.com/section_politics/content/pid_140535"
+        data-ad-sizes="460x800"
+        
+        
+        
+          data-ad-targeting='82cfc14a-a595-4212-bf25-8189a4af68b5'
+        
+        
+      >
+      
+        GEMG.GPT.targeting.slot['82cfc14a-a595-4212-bf25-8189a4af68b5'] = {
+        
+          'pos': [
+            'gutter'
+          ],
+        
+          'level': [
+            '2'
+          ]
+        
+        };
+      
+      </script>
+    
+  
+          </div>
+        
+      
+      
+          
+    
+  
+      
+    </div>
+  </div>
+
+
+  </div>
+  
+
+  
+    <div class="container_12 content">
+      
+  <div class="grid_8 d1-article article dont-miss-compare-with">
+    <article class="article-for-flyin">
+      <h1 class="d1-post-title">
+        
+        <span class="d1-post-title-text">Trump Cybersecurity Advisers Resign In &#8216;Moral&#8217;&nbsp;Protest</span>
+      </h1>
+
+      <div class="d1-lead-image-container">
+        
+          <img src="http://cdn.defenseone.com/media/img/upload/2017/08/25/T-dizzle/defense-large.jpg" alt="President Donald Trump walks from Marine One across the South Lawn of the White House in Washington, Aug. 23, 2017." title="President Donald Trump walks from Marine One across the South Lawn of the White House in Washington, Aug. 23, 2017.">
+        
+      </div>
+
+      <div class="d1-article-sidebar-meta">
+
+        
+
+        
+<ul class="d1-article-author-bio-short">
+  
+    <li class="d1-article-author-bio-short-item">
+      
+        <span class="d1-article-author-bio-short-item-img">
+          <img src="http://cdn.defenseone.com/media/img/upload/2013/08/13/joemarks_3/defense-one-article.jpg"  />
+        </span>
+      
+
+      <span class="d1-article-author-bio-short-item-byline">
+        By
+        Joseph Marks
+      </span>
+
+      
+        <span class="d1-article-author-bio-short-item-title">
+          Senior Correspondent,
+          
+            <a class="d1-article-author-bio-short-item-org-link" href="http://www.nextgov.com/" target="_blank">
+              Nextgov
+            </a>
+          
+        
+        </span>
+      
+
+      
+        <a class="d1-article-author-bio-short-item-link" href="/voices/joseph-marks/2352/?oref=d-article-author">
+          Read bio<span class="gemg-icon icon-ico-arrowright"></span>
+        </a>
+      
+    </li>
+  
+</ul>
+
+
+        
+        <p class="d1-article-pub-date">
+          August 25, 2017
+        </p>
+        
+
+        
+          <div class="d1-article-topics-module">
+            <p class="d1-article-topics-module-title">
+              <span class="d1-article-topics-module-title-text">Topics</span>
+            </p>
+            <ul class="d1-article-topics-module-items">
+              
+                <li class="d1-article-topics-module-item">
+                  <a class="d1-article-topics-module-item-link" href="/topic/cyber/?oref=d-article-topics">
+                    <span class="d1-article-topics-module-item-link-inner-a">
+                      <span class="d1-article-topics-module-item-link-inner-b">
+                        Cyber
+                      </span>
+                    </span>
+                  </a>
+                </li>
+              
+                <li class="d1-article-topics-module-item">
+                  <a class="d1-article-topics-module-item-link" href="/topic/white-house/?oref=d-article-topics">
+                    <span class="d1-article-topics-module-item-link-inner-a">
+                      <span class="d1-article-topics-module-item-link-inner-b">
+                        White House
+                      </span>
+                    </span>
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </div>
+
+      <div
+        
+          
+            class="d1-lead-image-caption-container"
+          
+        
+      >
+        
+          <p class="d1-lead-image-caption-attribution">
+            
+              <a class="d1-lead-image-caption-attribution-btn" href="javascript:void(0)" onclick="return false;">
+                <span class="d1-lead-image-caption-attribution-text">
+                  Carolyn Kaster/AP
+                  <span class="d1-dropdown-arrow d1-dropdown-expand-arrow"></span>
+                </span>
+              </a>
+            
+          </p>
+        
+
+        <span class="article-controls">
+  <a href="#" class="increase-font">
+    A<span class="small">A</span>
+    <span class="increase-font-text">Font size +</span>
+  </a>
+  <a class="print" href="/politics/2017/08/trump-cybersecurity-advisers-resign-moral-protest/140535/print/" target="_blank">Print</a>
+</span>
+
+        
+          <p class="d1-lead-image-caption-text d1-lead-image-has-caption-attribution">
+            President Donald Trump walks from Marine One across the South Lawn of the White House in Washington, Aug. 23, 2017.
+          </p>
+        
+
+      </div>
+
+      <ul class="d1-social-article">
+  <li class="d1-social-article-link">
+    <a
+      class="gemg-icon icon-ico-facebook"
+      href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fcdn.defenseone.com%2Fmedia%2Fimg%2Fupload%2F2017%2F08%2F25%2FT-dizzle%2Fopen-graph.jpg&redirect_uri=http%3A%2F%2Fwww.defenseone.com&link=http%3A%2F%2Fwww.defenseone.com%2Fpolitics%2F2017%2F08%2Ftrump-cybersecurity-advisers-resign-moral-protest%2F140535%2F&app_id=1546266055584988&display=popup"
+      target="_blank"
+    >
+      <span class="d1-sr-only">Facebook</span>
+    </a>
+  </li>
+  <li class="d1-social-article-link">
+    <a
+      class="gemg-icon icon-ico-twitter"
+      href="https://twitter.com/share?url=http%3A%2F%2Fwww.defenseone.com%2Fpolitics%2F2017%2F08%2Ftrump-cybersecurity-advisers-resign-moral-protest%2F140535%2F&text=Trump+Cybersecurity+Advisers+Resign+In+%27Moral%27+Protest&via=defenseone"
+      target="_blank"
+    >
+      <span class="d1-sr-only">Twitter</span>
+    </a>
+  </li>
+  <li class="d1-social-article-link">
+    <a
+      class="gemg-icon icon-ico-linkedin"
+      href="http://www.linkedin.com/shareArticle?url=http%3A%2F%2Fwww.defenseone.com%2Fpolitics%2F2017%2F08%2Ftrump-cybersecurity-advisers-resign-moral-protest%2F140535%2F&mini=true&summary=Board+members+also+condemned+the+president%E2%80%99s+response+to+racist+violence+in+Charlottesville%2C+Va.&source=DefenseOne.com&title=Trump+Cybersecurity+Advisers+Resign+In+%27Moral%27+Protest"
+      target="_blank"
+    >
+        <span class="d1-sr-only">LinkedIn</span>
+    </a>
+  </li>
+  <li class="d1-social-article-link">
+    <a
+      class="addthis_button_email gemg-icon icon-ico-email-circle"
+      href="#"
+      rel="nofollow"
+      title="Email this article"
+    >
+      <span class="d1-sr-only">Email this article</span>
+    </a>
+  </li>
+</ul>
+
+      <div class="d1-article-sidebar-meta-mobile">
+
+        
+
+        
+<ul class="d1-article-author-bio-short">
+  
+    <li class="d1-article-author-bio-short-item">
+      
+        <span class="d1-article-author-bio-short-item-img">
+          <img src="http://cdn.defenseone.com/media/img/upload/2013/08/13/joemarks_3/defense-one-article.jpg"  />
+        </span>
+      
+
+      <span class="d1-article-author-bio-short-item-byline">
+        By
+        Joseph Marks
+      </span>
+
+      
+        <span class="d1-article-author-bio-short-item-title">
+          Senior Correspondent,
+          
+            <a class="d1-article-author-bio-short-item-org-link" href="http://www.nextgov.com/" target="_blank">
+              Nextgov
+            </a>
+          
+        
+        </span>
+      
+
+      
+        <a class="d1-article-author-bio-short-item-link" href="/voices/joseph-marks/2352/?oref=d-article-author">
+          Read bio<span class="gemg-icon icon-ico-arrowright"></span>
+        </a>
+      
+    </li>
+  
+</ul>
+
+
+        
+        <p class="d1-article-pub-date">
+          August 25, 2017
+        </p>
+        
+
+      </div>
+
+      
+  <div
+    
+    class="ad ad-defenseone-left-rail"
+  >
+    <div class="ad-container">
+      
+        
+          <div
+            
+              class="hidedesk hidemobile"
+            
+          >
+            
+    
+      <script
+        class="ad-stub ad-stub-tablet"
+        data-ad-unit="/617/defenseone.com/section_politics/content/pid_140535"
+        data-ad-sizes="300x250"
+        
+        
+        
+          data-ad-targeting='ee18fa43-1143-4219-ad39-1468050655fc'
+        
+        
+      >
+      
+        GEMG.GPT.targeting.slot['ee18fa43-1143-4219-ad39-1468050655fc'] = {
+        
+          'pos': [
+            'defenseone-left-rail'
+          ],
+        
+          'level': [
+            '3'
+          ]
+        
+        };
+      
+      </script>
+    
+  
+          </div>
+        
+      
+      
+          
+    
+      <noscript class="ad-noscript">
+        
+          <a href="http://pubads.g.doubleclick.net/gampad/jump?tile=2&amp;sz=300x250&amp;c=725719519&amp;iu=%2F617%2Fdefenseone.com%2Fsection_politics%2Fcontent%2Fpid_140535&amp;t=noscript%3Dtrue%26referring_domain%3Dwww.reddit.com%26pos%3Ddefenseone-left-rail%26level%3D2">
+            <img src="http://pubads.g.doubleclick.net/gampad/ad?tile=2&amp;sz=300x250&amp;c=725719519&amp;iu=%2F617%2Fdefenseone.com%2Fsection_politics%2Fcontent%2Fpid_140535&amp;t=noscript%3Dtrue%26referring_domain%3Dwww.reddit.com%26pos%3Ddefenseone-left-rail%26level%3D2"/>
+          </a>
+        
+      </noscript>
+    
+  
+      
+    </div>
+  </div>
+
+
+
+      
+        <p class="d1-article-subhead">
+          <span class="d1-article-subhead-inner-a">
+            <span class="d1-article-subhead-inner-b">
+              <span class="d1-article-subhead-inner-c">
+                Board members also condemned the president’s response to racist violence in Charlottesville, Va.
+              </span>
+            </span>
+          </span>
+        </p>
+      
+
+      <div class="text d1-article-content">
+        
+        
+        
+        
+
+        
+          
+            
+          
+          
+        
+
+        
+        
+        <p><strong>More than one-quarter of a panel </strong>tasked with advising the Homeland Security Department on cybersecurity and infrastructure protection resigned en masse Monday, citing President Donald Trump’s “insufficient attention” to the nation’s cyber vulnerabilities, among other complaints.</p>
+<p>Resigning members of the National Infrastructure Advisory Council also cited the president’s failure to single out neo-Nazis and white supremacists for condemnation after a violent protest earlier this month in Charlottesville, Virginia.</p>
+<p>“The moral infrastructure of our nation is the foundation on which our physical infrastructure is built,” the council members stated in a group resignation letter.</p>
+<p>The resignation <a href="http://www.nextgov.com/media/gbc/docs/pdfs_edit/082417jm1.pdf">letter</a>, obtained by <em>Nextgov</em>, also cites Trump’s decision to withdraw from the Paris climate change agreement and to revoke building standards related to flooding risk.</p><div class="d1-article-left-rail-subscribe-container">
+<p class="d1-article-sidebar-subscribe-title">
+<span class="d1-article-sidebar-subscribe-title-text">Subscribe</span>
+</p>
+<p class="d1-article-sidebar-subscribe-msg"><em>Receive daily email updates:</em></p>
+<p class="d1-article-sidebar-subscribe-msg">Subscribe to the Defense One daily.</p>
+<p class="d1-article-sidebar-subscribe-msg">Be the first to receive updates.</p>
+<form action="/newsletters/subscribe/" class="d1-article-subscribe" data-form-name="d1-extra-subscribe" method="post" name="defenseform">
+<input name="newsletter_signup_source" type="hidden" value="d1-article-inline"/>
+<input name="newsletter:newsletter_d1_today" type="hidden" value="1"/>
+<span aria-hidden="true" class="d1-article-subscribe-email-icon gemg-icon icon-ico-email"></span>
+<input class="d1-article-subscribe-email nl-email-address" name="email_address" placeholder="Enter your email" type="text"/>
+<input class="d1-article-subscribe-submit" name="Subscribe" type="submit" value="Subscribe"/>
+</form>
+</div>
+<p>“Your actions have threatened the security of the homeland I took an oath to protect,” the letter writers tell the president.</p>
+<p>The resignations come after Trump disbanded two business advisory councils earlier this month following a wave of resignations by chief executive officers. Those CEOs similarly condemned Trump’s response to the violence in Charlottesville.</p>
+<p>The former infrastructure council members particularly faulted Trump administration efforts to ensure the digital security of election systems.</p>
+<p>“You have given insufficient attention to the growing threats to the cybersecurity of the critical systems upon which all Americans depend, including those impacting the systems supporting our democratic election process,” the letter states.</p>
+<p>Former Homeland Security Secretary John Kelly continued an Obama administration effort to shift federal resources to shore up the cybersecurity of state and local election infrastructure following Russian efforts to meddle in the 2016 election. Kelly also stuck with an Obama-era decision to label election systems critical infrastructure—an official Homeland Security Department designation that makes it easier to commit federal resources to protecting them.</p>
+<p>Trump, however, has repeatedly questioned whether that meddling occurred and if Russia was responsible for it.</p>
+<p>Among the resigning council members are three Obama-era officials: White House Chief Data Scientist <a href="https://twitter.com/dpatil/status/900095104303509504"><span class="caps">DJ</span> Patil</a>, Office of Science and Technology Policy Chief of Staff <a href="https://twitter.com/cristindorgelo/status/900315595517906946">Cristin Dorgelo</a>, and White House Council on Environmental Quality Managing Director <a href="https://twitter.com/christygoldfuss/status/900419128351223811">Christy Goldfuss</a>, according to Twitter posts.  </p>
+<p>In total, eight out of 28 <span class="caps">NIAC</span> members’ names were removed from the official members <a href="https://www.dhs.gov/niac-members">web page</a> this week.  </p>
+<p>Remaining council members met Tuesday and <a href="http://www.nextgov.com/cybersecurity/2017/08/times-running-out-prevent-massive-cyberattack-critical-infrastructure-advisory-group-says/140417/?oref=ng-channelriver">approved</a> a report on cybersecurity vulnerabilities to critical infrastructure. That report warned that <span class="caps">U.S.</span> infrastructure is in “a pre-9/11 moment” when it comes to cybersecurity.<img class="tombstone" src="http://cdn.defenseone.com/a/defenseone/img/article-end.png"/></p>
+
+        
+
+        
+
+      </div>
+
+      
+        <ul class="d1-article-author-bio">
+          
+            
+              <li class="d1-article-author-bio-item">
+                
+                  <span class="d1-article-author-bio-item-text">
+                    Joseph Marks covers cybersecurity for Nextgov. He previously covered cybersecurity for Politico, intellectual property for Bloomberg BNA and federal litigation for Law360. He covered government technology for Nextgov during an earlier stint at the publication and began his career at Midwestern ...
+                  </span>
+                  <a class="d1-article-author-bio-item-link" href="/voices/joseph-marks/2352/?oref=d-article-author">
+                    Full bio<span class="gemg-icon icon-ico-arrowright"></span>
+                  </a>
+                
+              </li>
+            
+          
+        </ul>
+      
+
+      
+
+      <ul class="d1-social-article">
+  <li class="d1-social-article-link">
+    <a
+      class="gemg-icon icon-ico-facebook"
+      href="https://www.facebook.com/dialog/feed?picture=http%3A%2F%2Fcdn.defenseone.com%2Fmedia%2Fimg%2Fupload%2F2017%2F08%2F25%2FT-dizzle%2Fopen-graph.jpg&redirect_uri=http%3A%2F%2Fwww.defenseone.com&link=http%3A%2F%2Fwww.defenseone.com%2Fpolitics%2F2017%2F08%2Ftrump-cybersecurity-advisers-resign-moral-protest%2F140535%2F&app_id=1546266055584988&display=popup"
+      target="_blank"
+    >
+      <span class="d1-sr-only">Facebook</span>
+    </a>
+  </li>
+  <li class="d1-social-article-link">
+    <a
+      class="gemg-icon icon-ico-twitter"
+      href="https://twitter.com/share?url=http%3A%2F%2Fwww.defenseone.com%2Fpolitics%2F2017%2F08%2Ftrump-cybersecurity-advisers-resign-moral-protest%2F140535%2F&text=Trump+Cybersecurity+Advisers+Resign+In+%27Moral%27+Protest&via=defenseone"
+      target="_blank"
+    >
+      <span class="d1-sr-only">Twitter</span>
+    </a>
+  </li>
+  <li class="d1-social-article-link">
+    <a
+      class="gemg-icon icon-ico-linkedin"
+      href="http://www.linkedin.com/shareArticle?url=http%3A%2F%2Fwww.defenseone.com%2Fpolitics%2F2017%2F08%2Ftrump-cybersecurity-advisers-resign-moral-protest%2F140535%2F&mini=true&summary=Board+members+also+condemned+the+president%E2%80%99s+response+to+racist+violence+in+Charlottesville%2C+Va.&source=DefenseOne.com&title=Trump+Cybersecurity+Advisers+Resign+In+%27Moral%27+Protest"
+      target="_blank"
+    >
+        <span class="d1-sr-only">LinkedIn</span>
+    </a>
+  </li>
+  <li class="d1-social-article-link">
+    <a
+      class="addthis_button_email gemg-icon icon-ico-email-circle"
+      href="#"
+      rel="nofollow"
+      title="Email this article"
+    >
+      <span class="d1-sr-only">Email this article</span>
+    </a>
+  </li>
+</ul>
+
+      
+        <div class="d1-article-bottom-subscribe-container">
+          
+            
+<form
+  class="d1-article-subscribe"
+  action="/newsletters/subscribe/"
+  method="post"
+  name="defenseform"
+  data-form-name="d1-extra-subscribe"
+>
+  <input type="hidden" name="newsletter_signup_source" value="d1-article-inline"/>
+  <input type="hidden"
+         name="newsletter:newsletter_d1_today"
+         value="1" />
+  <span class="d1-article-subscribe-email-icon gemg-icon icon-ico-email" aria-hidden="true"></span>
+  <input class="d1-article-subscribe-email nl-email-address" name="email_address" type="text"
+         placeholder="Enter your email to get daily updates"/>
+  <input class="d1-article-subscribe-submit" type="submit" name="Subscribe" value="Subscribe">
+</form>
+
+          
+        </div>
+      
+
+    </article>
+
+  </div>
+
+  <div class="grid_4 d1-article-right-rail sidebar fright">
+    
+  <div
+    
+    class="ad ad-top-block"
+  >
+    <div class="ad-container">
+      
+        
+          <div
+            
+              class="hidetablet hidemobile"
+            
+          >
+            
+    
+      <script
+        class="ad-stub ad-stub-desktop"
+        data-ad-unit="/617/defenseone.com/section_politics/content/pid_140535"
+        data-ad-sizes="300x250,300x600,300x1000"
+        
+        
+        
+          data-ad-targeting='e37491a7-1cce-4057-8138-a2695ddcac8b'
+        
+        
+      >
+      
+        GEMG.GPT.targeting.slot['e37491a7-1cce-4057-8138-a2695ddcac8b'] = {
+        
+          'pos': [
+            'top-block'
+          ],
+        
+          'level': [
+            '4'
+          ]
+        
+        };
+      
+      </script>
+    
+  
+          </div>
+        
+      
+      
+          
+    
+      <noscript class="ad-noscript">
+        
+          <a href="http://pubads.g.doubleclick.net/gampad/jump?tile=3&amp;sz=300x600%7C300x250%7C300x1000&amp;c=176533833&amp;iu=%2F617%2Fdefenseone.com%2Fsection_politics%2Fcontent%2Fpid_140535&amp;t=noscript%3Dtrue%26referring_domain%3Dwww.reddit.com%26pos%3Dtop-block%26level%3D3">
+            <img src="http://pubads.g.doubleclick.net/gampad/ad?tile=3&amp;sz=300x600%7C300x250%7C300x1000&amp;c=176533833&amp;iu=%2F617%2Fdefenseone.com%2Fsection_politics%2Fcontent%2Fpid_140535&amp;t=noscript%3Dtrue%26referring_domain%3Dwww.reddit.com%26pos%3Dtop-block%26level%3D3"/>
+          </a>
+        
+      </noscript>
+    
+  
+      
+    </div>
+  </div>
+
+
+
+    
+  
+  
+  <div class="sideItem most-read">
+    <h4 class="most-read-title">
+      <span class="most-read-title-text">Most Read</span>
+    </h4>
+    <ol>
+      
+        <li class="most-read-item">
+          <span class="list-index">1</span>
+          <a href="/politics/2017/08/trump-cybersecurity-advisers-resign-moral-protest/140535/?oref=d-mostread">
+            <div></div>
+            <span>Trump Cybersecurity Advisers Resign In &#8216;Moral&#8217;&nbsp;Protest</span>
+          </a>
+        </li>
+      
+        <li class="most-read-item">
+          <span class="list-index">2</span>
+          <a href="/threats/2017/08/chinas-latest-moves-south-china-sea-spark-fears-new-land-grab/140536/?oref=d-mostread">
+            <div></div>
+            <span>Beijing&#8217;s Latest Moves in the South China Sea Spark Fears of a New Land&nbsp;Grab</span>
+          </a>
+        </li>
+      
+        <li class="most-read-item">
+          <span class="list-index">3</span>
+          <a href="/threats/2017/07/trumps-special-ops-pick-says-terror-drones-might-soon-reach-us-africa-how-worried-should-we-be/139642/?oref=d-mostread">
+            <div></div>
+            <span>Trump’s Special Ops Pick Says Terror Drones Might Soon Reach the <span class="caps">US</span> from Africa. How Worried Should We&nbsp;Be?</span>
+          </a>
+        </li>
+      
+    </ol>
+  </div>
+  
+
+
+    
+  <div
+    
+    class="ad ad-bottom-block"
+  >
+    <div class="ad-container">
+      
+        
+          <div
+            
+              class="hidetablet hidemobile"
+            
+          >
+            
+    
+      <script
+        class="ad-stub ad-stub-desktop"
+        data-ad-unit="/617/defenseone.com/section_politics/content/pid_140535"
+        data-ad-sizes="300x250"
+        
+        
+        
+          data-ad-targeting='5388162d-adc3-4931-9919-f6cf661fca57'
+        
+        
+      >
+      
+        GEMG.GPT.targeting.slot['5388162d-adc3-4931-9919-f6cf661fca57'] = {
+        
+          'pos': [
+            'bottom-block'
+          ],
+        
+          'level': [
+            '5'
+          ]
+        
+        };
+      
+      </script>
+    
+  
+          </div>
+        
+      
+      
+          
+    
+      <noscript class="ad-noscript">
+        
+          <a href="http://pubads.g.doubleclick.net/gampad/jump?tile=4&amp;sz=300x250&amp;c=852096145&amp;iu=%2F617%2Fdefenseone.com%2Fsection_politics%2Fcontent%2Fpid_140535&amp;t=noscript%3Dtrue%26referring_domain%3Dwww.reddit.com%26pos%3Dbottom-block%26level%3D4">
+            <img src="http://pubads.g.doubleclick.net/gampad/ad?tile=4&amp;sz=300x250&amp;c=852096145&amp;iu=%2F617%2Fdefenseone.com%2Fsection_politics%2Fcontent%2Fpid_140535&amp;t=noscript%3Dtrue%26referring_domain%3Dwww.reddit.com%26pos%3Dbottom-block%26level%3D4"/>
+          </a>
+        
+      </noscript>
+    
+  
+      
+    </div>
+  </div>
+
+
+
+    
+      <div class="d1-article-sidebar-subscribe-container">
+        
+          
+  <p class="d1-article-sidebar-subscribe-title">
+    <span class="d1-article-sidebar-subscribe-title-text">Subscribe</span>
+  </p>
+  
+    <p class="d1-article-sidebar-subscribe-msg"><em>Receive daily email updates:</em></p>
+    <p class="d1-article-sidebar-subscribe-msg">Subscribe to the Defense One daily.</p>
+    <p class="d1-article-sidebar-subscribe-msg">Be the first to receive updates.</p>
+  
+  
+<form
+  class="d1-article-subscribe"
+  action="/newsletters/subscribe/"
+  method="post"
+  name="defenseform"
+  data-form-name="d1-extra-subscribe"
+>
+  <input type="hidden" name="newsletter_signup_source" value="d1-right-rail"/>
+  <input type="hidden"
+         name="newsletter:newsletter_d1_today"
+         value="1" />
+  <span class="d1-article-subscribe-email-icon gemg-icon icon-ico-email" aria-hidden="true"></span>
+  <input class="d1-article-subscribe-email nl-email-address" name="email_address" type="text"
+         placeholder="Enter your email"/>
+  <input class="d1-article-subscribe-submit" type="submit" name="Subscribe" value="Subscribe">
+</form>
+
+
+        
+      </div>
+    
+
+  </div>
+
+  <div class="grid_4 d1-article-right-rail sidebar fright">
+    <div class="d1-article-dont-miss-container">
+      
+  
+  
+    <div class="dont-miss sideItem">
+      <h4 class="dont-miss-title">
+        <span class="dont-miss-title-text">Don't Miss</span>
+      </h4>
+      <ul class="dont-miss-section">
+        
+          <li
+            class="dont-miss-item dont-miss-show"
+          >
+          <a
+            href="/technology/2017/08/no-uss-mccain-probably-wasnt-hacked-what-if-it-was/140458/?oref=d-dontmiss"
+            
+            >
+            <div><img src="http://cdn.defenseone.com/media/img/upload/2017/08/23/3692316/thumb.jpg"
+     alt="Tugboats from Singapore assist the Guided-missile destroyer USS John S. McCain as it steers towards Changi Naval Base, Republic of Singapore following a collision with the merchant vessel. "
+     title="Tugboats from Singapore assist the Guided-missile destroyer USS John S. McCain as it steers towards Changi Naval Base, Republic of Singapore following a collision with the merchant vessel. "
+     
+     height="83" 
+     width="138" 
+/>
+
+</div>
+            No, <span class="caps">USS</span> McCain Probably Wasn&#8217;t Hacked. But What If It&nbsp;Was?
+          </a>
+          </li>
+        
+          <li
+            class="dont-miss-item dont-miss-show"
+          >
+          <a
+            href="/technology/2017/08/armys-space-force-has-doubled-six-years-and-demand-still-going/140467/?oref=d-dontmiss"
+            
+            >
+            <div><img src="http://cdn.defenseone.com/media/img/upload/2017/08/23/STRATCOM_visits_SMDCs_Reagan_Test_Site/thumb.jpg"
+     alt="United States Strategic Command commander Air Force Gen. John Hyten, fourth from right, visits SMDC&#39;s Reagan Test Site on Kwaj."
+     title="United States Strategic Command commander Air Force Gen. John Hyten, fourth from right, visits SMDC&#39;s Reagan Test Site on Kwaj."
+     
+     height="83" 
+     width="138" 
+/>
+
+</div>
+            Army’s Space Force Has Doubled in Six Years, and Demand Is Still Going&nbsp;Up
+          </a>
+          </li>
+        
+          <li
+            class="dont-miss-item dont-miss-show"
+          >
+          <a
+            href="/technology/2017/08/podcast-3-questions-consumer-drones-security/140061/?oref=d-dontmiss"
+            
+            >
+            <div><img src="http://cdn.defenseone.com/media/img/upload/2017/08/07/Screen_Shot_2017-08-07_at_4.11.04_PM/thumb.png"
+     alt="U.S. Marines in Syria in 2017, as seen from an aerial UAV."
+     title="U.S. Marines in Syria in 2017, as seen from an aerial UAV."
+     
+     height="83" 
+     width="138" 
+/>
+
+</div>
+            Podcast: 3 Questions on Consumer Drones <span class="amp">&amp;</span>&nbsp;Security
+          </a>
+          </li>
+        
+          <li
+            class="dont-miss-item dont-miss-show"
+          >
+          <a
+            href="/technology/2017/08/us-military-eyes-new-mini-nukes-21st-century-deterrence/139997/?oref=d-dontmiss"
+            
+            >
+            <div><img src="http://cdn.defenseone.com/media/img/upload/2017/08/03/Screen_Shot_2017-08-03_at_11.28.02_PM/thumb.png"
+     alt="A depiction of what a 20 Kiloton bomb would do to Washington, DC"
+     title="A depiction of what a 20 Kiloton bomb would do to Washington, DC"
+     
+     height="83" 
+     width="138" 
+/>
+
+</div>
+            <span class="caps">US</span> Military Eyes New Mini-Nukes for 21st-Century&nbsp;Deterrence
+          </a>
+          </li>
+        
+          <li
+            class="dont-miss-item dont-miss-show"
+          >
+          <a
+            href="/threats/2017/07/trumps-special-ops-pick-says-terror-drones-might-soon-reach-us-africa-how-worried-should-we-be/139642/?oref=d-dontmiss"
+            
+            >
+            <div><img src="http://cdn.defenseone.com/media/img/upload/2017/07/22/ocean-susnset-drone-pexels-photo-521686/thumb.jpeg"
+     alt=""
+     title=""
+     
+     height="83" 
+     width="138" 
+/>
+
+</div>
+            Terror Drones from Africa: How Worried Should We&nbsp;Be?
+          </a>
+          </li>
+        
+          <li
+            class="dont-miss-item dont-miss-hide"
+          >
+          <a
+            href="/technology/2016/04/problem-pentagon-hypersonic-missile/127493/?oref=d-dontmiss"
+            
+            >
+            <div><img src="http://cdn.defenseone.com/media/img/upload/2016/04/14/hypersonicBoostglide/thumb.png"
+     alt=""
+     title=""
+     
+     height="83" 
+     width="138" 
+/>
+
+</div>
+            The Problem with the Pentagon&#8217;s Hypersonic&nbsp;Missile
+          </a>
+          </li>
+        
+          <li
+            class="dont-miss-item dont-miss-hide"
+          >
+          <a
+            href="/technology/2017/07/tomorrow-soldier-how-military-altering-limits-human-performance/139374/?oref=d-dontmiss"
+            
+            >
+            <div><img src="http://cdn.defenseone.com/media/img/upload/2017/07/12/12340104483_de175dad2c_k/thumb.jpg"
+     alt="Karkh Area Command Strike Team soldiers rush onto a simulated battlefield during a joint air assault demonstration on Camp Taji, Iraq, March 29, 2010"
+     title="Karkh Area Command Strike Team soldiers rush onto a simulated battlefield during a joint air assault demonstration on Camp Taji, Iraq, March 29, 2010"
+     
+     height="83" 
+     width="138" 
+/>
+
+</div>
+            How The Military Is Altering the Limits of Human <br>Performance
+          </a>
+          </li>
+        
+          <li
+            class="dont-miss-item dont-miss-hide"
+          >
+          <a
+            href="/technology/2017/07/3d-printed-gun-file-dark-web-averages-12/139580/?oref=d-dontmiss"
+            
+            >
+            <div><img src="http://cdn.defenseone.com/media/img/upload/2017/07/19/Fig1_RAMBO-1/thumb.jpg"
+     alt="The additive-manufactured RAMBO system includes an NSRDEC-designed standalone kit with printed adjustable buttstock, mounts, grips and other modifications—modifications made possible by the quick turnaround time afforded by 3D printing"
+     title="The additive-manufactured RAMBO system includes an NSRDEC-designed standalone kit with printed adjustable buttstock, mounts, grips and other modifications—modifications made possible by the quick turnaround time afforded by 3D printing"
+     
+     height="83" 
+     width="138" 
+/>
+
+</div>
+            3D-Printed Gun Designs Are Selling for $12 on the Dark&nbsp;Web
+          </a>
+          </li>
+        
+          <li
+            class="dont-miss-item dont-miss-hide"
+          >
+          <a
+            href="http://www.defenseone.com/feature/mosul-largest-battle-decade-future-of-war/?oref=d-dontmiss"
+            
+              target="_blank"
+            
+            >
+            <div><img src="http://cdn.defenseone.com/media/img/upload/2017/07/11/Screen_Shot_2017-07-06_at_3.19.22_PM/thumb.png"
+     alt=""
+     title=""
+     
+     height="83" 
+     width="138" 
+/>
+
+</div>
+            Mosul: What the Decade&#8217;s Largest Battle Says About the Future of&nbsp;War
+          </a>
+          </li>
+        
+          <li
+            class="dont-miss-item dont-miss-hide"
+          >
+          <a
+            href="/technology/2017/04/us-army-exploring-devastating-new-weapon-event-war-russia/136943/?oref=d-dontmiss"
+            
+            >
+            <div><img src="http://cdn.defenseone.com/media/img/upload/2017/04/11/Screen_Shot_2017-04-11_at_9.12.07_PM/thumb.png"
+     alt="A monorail dry-run test at Holloman Air Force Base in July 2013 had no payload and used three representative carbon-epoxy panels mounted on the top and sides of the sled."
+     title="A monorail dry-run test at Holloman Air Force Base in July 2013 had no payload and used three representative carbon-epoxy panels mounted on the top and sides of the sled."
+     
+     height="83" 
+     width="138" 
+/>
+
+</div>
+            <span class="caps">US</span> Army Exploring &#8216;Devastating&#8217; New Weapon for Use In War with&nbsp;Russia
+          </a>
+          </li>
+        
+      </ul>
+    </div>
+  
+
+    </div>
+  </div>
+
+  <div class="grid_6 prefix_2">
+    
+      <div class="comments loadMore grey">
+        <p id="show_comments"><a href="#">Show Comments</a></p>
+        <p id="loading_comments" class="hidden">Loading...</p>
+        <p id="hide_comments" class="hidden"><a href="#">Hide Comments</a></p>
+      </div>
+      <div class="hidden comment-box" id="comments">
+        <p class="legal">
+          By using this service you agree not to post material that is obscene, harassing, defamatory, or
+          otherwise objectionable. Although Defenseone.com does not monitor comments posted to this site (and
+          has no obligation to), it reserves the right to delete, edit, or move any material that it deems
+          to be in violation of this rule.
+        </p>
+        <div id="disqus_thread"></div>
+        <div id="static_comments"></div>
+      </div>
+      <div class="clear"></div>
+      <script type="text/javascript">
+          var disqus_shortname = 'defenseone';
+          var disqus_identifier = 'post_140535';
+          var disqus_url = 'http://www.defenseone.com/politics/2017/08/trump-cybersecurity-advisers-resign-moral-protest/140535/';
+          //var disqus_title = 'a unique title for each page where Disqus is present';
+          
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+
+
+  <div class="clear"></div>
+
+  <div class="grid_11 prefix_1 vmargin bottom">
+
+	<div class="hidetablet hidemobile">
+    
+  <div
+    
+    class="ad ad-large-rectangle-desktop"
+  >
+    <div class="ad-container">
+      
+        
+          <div
+            
+              class="hidetablet hidemobile"
+            
+          >
+            
+    
+      <script
+        class="ad-stub ad-stub-desktop"
+        data-ad-unit="/617/defenseone.com/section_politics/content/pid_140535"
+        data-ad-sizes="940x470"
+        
+        
+        
+          data-ad-targeting='13967212-3049-4093-b58f-7b1f2a5fd203'
+        
+        
+          data-ad-lazy
+        
+      >
+      
+        GEMG.GPT.targeting.slot['13967212-3049-4093-b58f-7b1f2a5fd203'] = {
+        
+          'pos': [
+            'large-rectangle-desktop'
+          ],
+        
+          'level': [
+            '6'
+          ]
+        
+        };
+      
+      </script>
+    
+  
+          </div>
+        
+      
+      
+          
+    
+      <noscript class="ad-noscript">
+        
+          <a href="http://pubads.g.doubleclick.net/gampad/jump?tile=5&amp;sz=940x470&amp;c=620543811&amp;iu=%2F617%2Fdefenseone.com%2Fsection_politics%2Fcontent%2Fpid_140535&amp;t=noscript%3Dtrue%26referring_domain%3Dwww.reddit.com%26pos%3Dlarge-rectangle-desktop%26level%3D5">
+            <img src="http://pubads.g.doubleclick.net/gampad/ad?tile=5&amp;sz=940x470&amp;c=620543811&amp;iu=%2F617%2Fdefenseone.com%2Fsection_politics%2Fcontent%2Fpid_140535&amp;t=noscript%3Dtrue%26referring_domain%3Dwww.reddit.com%26pos%3Dlarge-rectangle-desktop%26level%3D5"/>
+          </a>
+        
+      </noscript>
+    
+  
+      
+    </div>
+  </div>
+
+
+	</div>
+	<div class="hidedesk hidemobile">
+    
+  <div
+    
+    class="ad ad-large-rectangle-tablet"
+  >
+    <div class="ad-container">
+      
+        
+          <div
+            
+              class="hidedesk hidemobile"
+            
+          >
+            
+    
+      <script
+        class="ad-stub ad-stub-tablet"
+        data-ad-unit="/617/defenseone.com/section_politics/content/pid_140535"
+        data-ad-sizes="700x350"
+        
+        
+        
+          data-ad-targeting='77a1f798-9375-4406-8349-1ad897af6ee9'
+        
+        
+          data-ad-lazy
+        
+      >
+      
+        GEMG.GPT.targeting.slot['77a1f798-9375-4406-8349-1ad897af6ee9'] = {
+        
+          'pos': [
+            'large-rectangle-tablet'
+          ],
+        
+          'level': [
+            '7'
+          ]
+        
+        };
+      
+      </script>
+    
+  
+          </div>
+        
+      
+      
+          
+    
+      <noscript class="ad-noscript">
+        
+          <a href="http://pubads.g.doubleclick.net/gampad/jump?tile=6&amp;sz=700x350&amp;c=874460579&amp;iu=%2F617%2Fdefenseone.com%2Fsection_politics%2Fcontent%2Fpid_140535&amp;t=noscript%3Dtrue%26referring_domain%3Dwww.reddit.com%26pos%3Dlarge-rectangle-tablet%26level%3D6">
+            <img src="http://pubads.g.doubleclick.net/gampad/ad?tile=6&amp;sz=700x350&amp;c=874460579&amp;iu=%2F617%2Fdefenseone.com%2Fsection_politics%2Fcontent%2Fpid_140535&amp;t=noscript%3Dtrue%26referring_domain%3Dwww.reddit.com%26pos%3Dlarge-rectangle-tablet%26level%3D6"/>
+          </a>
+        
+      </noscript>
+    
+  
+      
+    </div>
+  </div>
+
+
+	</div>
+	<div class="hidedesk hidetablet">
+    
+  <div
+    
+    class="ad ad-large-rectangle-mobile"
+  >
+    <div class="ad-container">
+      
+        
+          <div
+            
+              class="hidedesk hidetablet"
+            
+          >
+            
+    
+      <script
+        class="ad-stub ad-stub-mobile"
+        data-ad-unit="/617/defenseone.com/section_politics/content/pid_140535"
+        data-ad-sizes="300x150,300x250"
+        
+        
+        
+          data-ad-targeting='b5a9802e-5647-49cd-b996-8811cc9e37b8'
+        
+        
+          data-ad-lazy
+        
+      >
+      
+        GEMG.GPT.targeting.slot['b5a9802e-5647-49cd-b996-8811cc9e37b8'] = {
+        
+          'pos': [
+            'large-rectangle-mobile'
+          ],
+        
+          'level': [
+            '8'
+          ]
+        
+        };
+      
+      </script>
+    
+  
+          </div>
+        
+      
+      
+          
+    
+      <noscript class="ad-noscript">
+        
+          <a href="http://pubads.g.doubleclick.net/gampad/jump?tile=7&amp;sz=300x250%7C300x150&amp;c=348706124&amp;iu=%2F617%2Fdefenseone.com%2Fsection_politics%2Fcontent%2Fpid_140535&amp;t=noscript%3Dtrue%26referring_domain%3Dwww.reddit.com%26pos%3Dlarge-rectangle-mobile%26level%3D7">
+            <img src="http://pubads.g.doubleclick.net/gampad/ad?tile=7&amp;sz=300x250%7C300x150&amp;c=348706124&amp;iu=%2F617%2Fdefenseone.com%2Fsection_politics%2Fcontent%2Fpid_140535&amp;t=noscript%3Dtrue%26referring_domain%3Dwww.reddit.com%26pos%3Dlarge-rectangle-mobile%26level%3D7"/>
+          </a>
+        
+      </noscript>
+    
+  
+      
+    </div>
+  </div>
+
+
+	</div>
+
+    
+      <div>
+        <div class="grid_12 pager hidedesk">
+          
+            <div class="grid_4 prefix_1 alpha">
+                <div class="prev_box hidemobile"><a href="/news/2017/08/the-d-brief-august-25-2017/140527/?oref=d-previouspost"><img src="http://cdn.defenseone.com/media/img/upload/2017/08/25/DB-lander/defense-post.png" alt="" title=""></a></div>
+                <p><a href="/news/2017/08/the-d-brief-august-25-2017/140527/?oref=d-previouspost">&laquo; Previous</a></p>
+                <h4><a href="/news/2017/08/the-d-brief-august-25-2017/140527/?oref=d-previouspost">UN wants Raqqa pause; Missing McCain sailors IDed; China mounts unusual long-range drills; US cyber advisers resign in protest; and just a bit more...</a></h4>
+              
+            </div>
+          
+          
+            <div class="grid_4 prefix_2 omega">
+                <div class="next_box hidemobile"><a href="/threats/2017/08/chinas-latest-moves-south-china-sea-spark-fears-new-land-grab/140536/?oref=d-nextpost"><img src="http://cdn.defenseone.com/media/img/upload/2017/08/25/AP_17131358937866/defense-post.jpg" alt="This April 21, 2017 photo taken from a C-130 transport plane with Defense Chief Delfin Lorenzana and Armed Forces Chief Gen. Eduardo Ano shows Thitu Island off the South China Sea." title="This April 21, 2017 photo taken from a C-130 transport plane with Defense Chief Delfin Lorenzana and Armed Forces Chief Gen. Eduardo Ano shows Thitu Island off the South China Sea."></a></div>
+                <p><a href="/threats/2017/08/chinas-latest-moves-south-china-sea-spark-fears-new-land-grab/140536/?oref=d-nextpost">Next &raquo;</a></p>
+                <h4><a href="/threats/2017/08/chinas-latest-moves-south-china-sea-spark-fears-new-land-grab/140536/?oref=d-nextpost">Beijing&#39;s Latest Moves in the South China Sea Spark Fears of a New Land Grab</a></h4>
+              
+            </div>
+          
+        </div>
+      </div>
+    
+
+    
+    <div id="slides" class="grid_12 hidedesk slidecontainer">
+      <div id="slideContainer" class="swipe">
+        
+  
+      
+      
+  
+
+  <ul class="swipe-wrap">
+  
+  
+
+      
+
+      
+      <li class="grid_2 alpha">
+          <a href="/business/2017/08/global-business-brief-august-24-2017/140485/?oref=d-skybox"
+             
+          >
+
+              <div><img src="http://cdn.defenseone.com/media/img/upload/2017/08/24/GBB_header/defense-skybox.jpg" alt="" title=""></div>
+              <span><span class="caps">THIS</span> <span class="caps">WEEK</span>: The Pentagon’s nuke deals and Northrop; Q&A with Erik Prince; and more.</span>
+          </a>
+      </li>
+      
+
+      
+  
+
+      
+
+      
+      <li class="grid_2">
+          <a href="/threats/2017/08/how-us-can-pressure-pakistan/140511/?oref=d-skybox"
+             
+          >
+
+              <div><img src="http://cdn.defenseone.com/media/img/upload/2017/08/24/AP_17115264465057/defense-skybox.jpg" alt="Pakistani paramilitary troops take position during a gunbattle with militants in Karachi, Pakistan in April." title="Pakistani paramilitary troops take position during a gunbattle with militants in Karachi, Pakistan in April."></div>
+              <span>How the <span class="caps">US</span> Can Pressure Pakistan</span>
+          </a>
+      </li>
+      
+
+      
+  
+
+      
+
+      
+      <li class="grid_2">
+          <a href="/threats/2017/08/are-restrictions-keeping-us-winning-afghanistan/140463/?oref=d-skybox"
+             
+          >
+
+              <div><img src="http://cdn.defenseone.com/media/img/upload/2017/08/23/AP_17233484660117/defense-skybox.jpg" alt="Afghan National Army soldiers stand guard at a checkpoint on the outskirts of Kabul, Afghanistan, Monday, Aug. 21, 2017. Deep in the mountains of eastern Afghanistan, on the front lines against Taliban and Islamic State fighters." title="Afghan National Army soldiers stand guard at a checkpoint on the outskirts of Kabul, Afghanistan, Monday, Aug. 21, 2017. Deep in the mountains of eastern Afghanistan, on the front lines against Taliban and Islamic State fighters."></div>
+              <span>Are ‘Restrictions’ Keeping Us From Winning in Afghanistan? </span>
+          </a>
+      </li>
+      
+
+      
+  
+
+      
+
+      
+      <li class="grid_2">
+          <a href="/business/2017/08/us-air-force-orders-new-icbms/140405/?oref=d-skybox"
+             
+          >
+
+              <div><img src="http://cdn.defenseone.com/media/img/upload/2017/08/21/11593744315_df2ede19cd_k/defense-skybox.jpg" alt="An operational test launch of an unarmed Minuteman III intercontinental ballistic missile from Vandenberg Air Force Base, Calif., is seen from nearby Lompoc, California in September 2013." title="An operational test launch of an unarmed Minuteman III intercontinental ballistic missile from Vandenberg Air Force Base, Calif., is seen from nearby Lompoc, California in September 2013."></div>
+              <span><span class="caps">US</span> Air Force Orders New ICBMs</span>
+          </a>
+      </li>
+      
+
+      
+  
+
+      
+
+      
+      <li class="grid_2">
+          <a href="/politics/2017/08/trump-cybersecurity-advisers-resign-moral-protest/140535/?oref=d-skybox"
+             
+          >
+
+              <div><img src="http://cdn.defenseone.com/media/img/upload/2017/08/25/T-dizzle/defense-skybox.jpg" alt="President Donald Trump walks from Marine One across the South Lawn of the White House in Washington, Aug. 23, 2017." title="President Donald Trump walks from Marine One across the South Lawn of the White House in Washington, Aug. 23, 2017."></div>
+              <span>Trump Cybersecurity Advisers Resign In &#8216;Moral&#8217; Protest</span>
+          </a>
+      </li>
+      
+
+      
+  
+
+      
+      <li class="grid_2">
+          <a href="http://pubads.g.doubleclick.net/gampad/clk?id=4391390055&amp;iu=/617/defenseone.com/click-tracker"
+             class="sponsored"
+             
+                 target="_blank"
+             
+          >
+              <div><img src="http://cdn.defenseone.com/media/img/upload/2017/08/15/Screen_Shot_2017-08-15_at_6.32.28_PM/defense-skybox.png" alt="" title=""></div>
+              <div>Sponsor Content</div>
+              <span>3 Questions: Consumer Drones <span class="amp">&amp;</span> Security</span>
+          </a>
+
+          
+          <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/617/defenseone.com/tracking-pixel&amp;sz=1x1&amp;t=tracking-pixel%3D00387&amp;c=12345"
+              width="1"
+              height="1"
+              alt=""
+              class="tracking-pixel"
+          />
+          
+      </li>
+      
+      
+
+      
+
+      
+  
+  </ul>
+
+  <ul class="counter">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+  </ul>
+
+  <a class="button" href="javascript:;" ></a>
+
+
+      </div>
+    </div>
+    
+  </div>
+
+  
+    <div class="grid_12 pager hidemobile hidetablet">
+      
+        <div class="grid_4 prefix_1 alpha ">
+            <div class="prev_box"><a href="/news/2017/08/the-d-brief-august-25-2017/140527/?oref=d-previouspost"><img src="http://cdn.defenseone.com/media/img/upload/2017/08/25/DB-lander/medium.png" alt="" title=""></a></div>
+            <p><a href="/news/2017/08/the-d-brief-august-25-2017/140527/?oref=d-previouspost">&laquo; Previous</a></p>
+            <h4><a href="/news/2017/08/the-d-brief-august-25-2017/140527/?oref=d-previouspost">UN wants Raqqa pause; Missing McCain sailors IDed; China mounts unusual long-range drills; US cyber advisers resign in protest; and just a bit more...</a></h4>
+          
+        </div>
+      
+      
+        <div class="grid_4 prefix_2 omega ">
+            <div class="next_box"><a href="/threats/2017/08/chinas-latest-moves-south-china-sea-spark-fears-new-land-grab/140536/?oref=d-nextpost"><img src="http://cdn.defenseone.com/media/img/upload/2017/08/25/AP_17131358937866/medium.jpg" alt="This April 21, 2017 photo taken from a C-130 transport plane with Defense Chief Delfin Lorenzana and Armed Forces Chief Gen. Eduardo Ano shows Thitu Island off the South China Sea." title="This April 21, 2017 photo taken from a C-130 transport plane with Defense Chief Delfin Lorenzana and Armed Forces Chief Gen. Eduardo Ano shows Thitu Island off the South China Sea."></a></div>
+            <p><a href="/threats/2017/08/chinas-latest-moves-south-china-sea-spark-fears-new-land-grab/140536/?oref=d-nextpost">Next &raquo;</a></p>
+            <h4><a href="/threats/2017/08/chinas-latest-moves-south-china-sea-spark-fears-new-land-grab/140536/?oref=d-nextpost">Beijing&#39;s Latest Moves in the South China Sea Spark Fears of a New Land Grab</a></h4>
+          
+        </div>
+      
+    </div>
+  
+
+    </div>
+  
+
+  <div class="container_12 footerContainer">
+    <footer class="grid_12">
+      <div class="grid_2 alpha">
+        <a href="/?oref=d-logo" class="footer-logo">Defense One</a>
+      </div>
+      <div class="grid_10 omega">
+        <ul>
+          <li><a href="/about/?oref=footer">About</a></li>
+          <li><a href="/about/contact/?oref=footer">Contact Us</a></li>
+          <li><a href="/events/?oref=footer">Events</a></li>
+          <li><a href="http://www.govexecmediagroup.com/about/#Defense-One1">Advertise</a></li>
+          <li><a href="/about/site-map/?oref=footer">Site Map</a></li>
+          <li><a href="/about/privacy-policy/?oref=footer">Privacy Policy</a></li>
+          <li><a href="/about/terms-and-conditions/?oref=footer">Terms &amp; Conditions</a></li>
+        </ul>
+        <ul>
+          <li><a href="http://www.govexec.com/?oref=d-footer">Government Executive</a></li>
+          <li><a href="http://www.nextgov.com/?oref=d-footer">Nextgov</a></li>
+          <li><a href="http://qz.com/?oref=d-footer">Quartz</a></li>
+          <li><a href="http://www.nationaljournal.com/?oref=d-footer">National Journal</a></li>
+          <li><a href="http://www.theatlantic.com/?oref=d-footer">The Atlantic</a></li>
+          <li><a href="http://www.citylab.com/?oref=d-footer">CityLab</a></li>
+        </ul>
+        <p>&copy; 2017 by National Journal Group, Inc. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+</div>
+
+  
+  
+
+  
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ee7a1b53b23332d"></script>
+  
+  <script type="text/javascript" src="http://cdn.defenseone.com/a/social_tools/js/social_tools.js?v=7.7.1"></script>
+  <script type="text/javascript" src="http://cdn.defenseone.com/a/js/jquery.form.js?v=7.7.1"></script>
+  <script type="text/javascript" src="http://cdn.defenseone.com/a/js/newsletter.form.js?v=7.7.1"></script>
+  
+    <script src="//my.hellobar.com/15fb7c5f8f9f27c76676e95c43e602fa1c9ade83.js" type="text/javascript" charset="utf-8" async="async"></script>
+  
+  <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion_async.js" charset="utf-8"></script>
+  <script id="handlebars-flyin" class="handlebars-template" type="text/x-handlebars-template">
+    
+<div class="share-section small-logo"
+   data-url="{{{share_url}}}">
+
+    <ul class="social-buttons">
+      <li class="social-button facebook available">
+        <a href="https://www.facebook.com/dialog/feed?link={{{facebook_link}}}&amp;description={{{facebook_description}}}&amp;display=popup&amp;app_id={{{facebook_app_id}}}&amp;redirect_uri={{{facebook_redirect_uri}}}"
+          target="_blank"
+        >Share this on Facebook</a>
+      </li>
+      <li class="social-button twitter available">
+        <a href="https://twitter.com/share?via={{{twitter_via}}}&amp;text={{{twitter_text}}}&amp;url={{{twitter_url}}}"
+          target="_blank"
+        >Tweet this on Twitter</a>
+      </li>
+      <li class="social-button google-plus available">
+        <a href="https://plus.google.com/share?url={{{googleplus_url}}}"
+          target="_blank"
+        >Share this on Google Plus</a>
+      </li>
+      <li class="social-button linkedin available">
+      <a href="http://www.linkedin.com/shareArticle?mini=true&amp;title={{{linkedin_title}}}&amp;source={{{linkedin_source}}}&amp;summary={{{linkedin_summary}}}&amp;url={{{linkedin_url}}}"
+          target="_blank"
+        >Share this on LinkedIn</a>
+      </li>
+      <li class="social-button comment disqus-handlebar">
+        <a class="disqus-count"
+          href="{{{disqus_share_url}}}?oref=flyin-disqus#disqus_thread"
+          data-disqus-identifier="post_{{{disqus_id}}}"
+        >Leave a comment</a>
+      </li>
+    </ul>
+</div>
+  </script>
+
+
+<div id="modal_window">
+	<div id="modal_window_content">
+		<img src="http://cdn.defenseone.com/a/images/ajax-loading.gif" width="32" height="32" alt="Loading..." />
+	</div>
+	<a href="#" class="close_button">
+		<img src="http://cdn.defenseone.com/a/images/close-circle.png" alt="Close window" width="30" height="30" />
+	</a>
+</div>
+
+
+  
+    
+    
+    
+    
+    <div
+    id="flyin-container" 
+    class="flyin-container"
+    data-flyin-setting='sailthru'
+    data-flyin-site-name='Defense One'
+    data-flyin-site-url='http://www.defenseone.com'
+    data-flyin-concierge-tag='site-defenseone'
+    data-flyin-title='Trump Cybersecurity Advisers Resign In &#39;Moral&#39; Protest'
+    data-flyin-url='http://www.defenseone.com/politics/2017/08/trump-cybersecurity-advisers-resign-moral-protest/140535/'
+    data-flyin-curated-urls=''
+    data-flyin-fb-app-id='1546266055584988'
+    data-flyin-twitter-handle='@DefenseOne'
+    data-flyin-facebook-site-name='DefenseOne'
+    data-flyin-native-article-url='/news/2017/08/the-d-brief-august-25-2017/140527/'
+    data-flyin-native-article-title='UN wants Raqqa pause; Missing McCain sailors IDed; China mounts unusual long-range drills; US cyber advisers resign in protest; and just a bit more...'
+  >
+
+  <div class="flyin" id="flyin_open">
+    <div class="label">
+      <a href="#" id="closer">Close [ x ]</a>
+      <strong>More from DefenseOne</strong>
+    </div>
+    <div id="sailthru-flyin">
+
+    </div>
+  </div>
+</div>
+
+<div class="flyin-container">
+  <div class="flyin closed" id="flyin_closed">
+    <div class="label">
+      &nbsp;
+    </div>
+    <div class="headline">
+      <a href="#" id="opener">Next Story</a>
+    </div>
+    <div class="meta addthis_toolbox">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  
+
+
+
+  
+  <div class="conversion-module-bootstrap">
+  <div class="conversion-module hide">
+    <div class="conversion-module-close">
+      <button class="conversion-module-close-btn close" type="button" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="conversion-module-nl-signup">
+      
+        
+
+<form
+  class="conversion-module-signup-form"
+  action='/newsletters/subscribe/conversion-module/defense-one-today/'
+  method="post"
+>
+  <fieldset>
+    <legend class="conversion-module-signup-form-title">
+      <span class="conversion-module-signup-form-title-line1">
+        News, analysis, and ideas driving the future of U.S. defense: straight to your inbox.
+      </span>
+      <span class="conversion-module-signup-form-title-line2">
+        <span class="conversion-module-signup-form-title-line2-inner-a">
+          <span class="conversion-module-signup-form-title-line2-inner-b">
+            Sign up for Defense One Today
+          </span>
+        </span>
+      </span>
+    </legend>
+
+    
+
+    
+
+  
+    <input type="hidden" name="source_signup" value="d1-mod-conv-dt" id="conversion-module-nl-source_signup" />
+  
+    <input type="hidden" name="run_through_id" id="conversion-module-nl-run_through_id" />
+  
+
+  
+    
+
+<div class="conversion-module-signup-form-email form-group">
+  <label
+    class="conversion-module-signup-form-label control-label"
+    for="conversion-module-nl-email"
+  >
+    My email is ...
+  </label>
+  
+    <input id="conversion-module-nl-email" type="text" placeholder="email@example.com" class="form-control input-lg" name="email" />
+  
+</div>
+
+  
+
+  
+    
+
+<div class="conversion-module-signup-form-employer form-group">
+  <label
+    class="conversion-module-signup-form-label control-label"
+    for="conversion-module-nl-employer"
+  >
+    I work for ...
+  </label>
+  
+    <select id="conversion-module-nl-employer" class="form-control input-lg" name="employer">
+<option value="" selected="selected">--select--</option>
+<option value="Military">Military</option>
+<option value="Federal Government">Federal Government</option>
+<option value="State/Local Government">State/Local Government</option>
+<option value="Contractor">Contractor</option>
+<option value="Private Sector">Private Sector</option>
+<option value="Retired">Retired</option>
+</select>
+  
+</div>
+
+  
+
+
+
+    
+  <div class="conversion-module-signup-form-extra_newsletter form-group">
+    
+    <div class="checkbox">
+      <label class="conversion-module-signup-form-label" for="conversion-module-nl-extra_newsletter">
+        <input checked="checked" type="checkbox" name="extra_newsletter" id="conversion-module-nl-extra_newsletter" />
+        <span class="conversion-module-signup-form-label-text">Also get The D Brief, your daily source for insights and analysis of the latest in defense news</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="conversion-module-signup-form-optin form-group">
+    
+    <div class="checkbox">
+      <label class="conversion-module-signup-form-label" for="conversion-module-nl-optin">
+        <input checked="checked" type="checkbox" name="optin" id="conversion-module-nl-optin" />
+        <span class="conversion-module-signup-form-label-text">Yes, Defense One can email me on behalf of carefully selected companies and organizations.</span>
+      </label>
+    </div>
+  </div>
+
+
+    <div class="conversion-module-signup-form-submit form-group">
+      <button class="conversion-module-signup-form-submit-btn btn btn-default" type="submit">
+        <span class="conversion-module-signup-form-submit-text">
+          <span class="conversion-module-signup-form-submit-arrow"></span>
+          Sign up
+        </span>
+      </button>
+    </div>
+
+    <a class="conversion-module-signup-form-link" href="/about/privacy-policy/" target="_blank">View Privacy Policy</a>
+
+  </fieldset>
+</form>
+
+      
+    </div>
+    <div class="conversion-module-nl-thankyou hide">
+      
+        
+
+<form
+  class="conversion-module-signup-form"
+  action='/newsletters/subscribe/conversion-module/defense-one-today/thank-you/'
+  method="post"
+>
+  <fieldset>
+    <legend class="conversion-module-signup-form-title">
+      <span class="conversion-module-signup-form-title-line1">
+        Thank you.
+      </span>
+      <span class="conversion-module-signup-form-title-line2">
+        <span class="conversion-module-signup-form-title-line2-inner-a">
+          <span class="conversion-module-signup-form-title-line2-inner-b">
+            Help us tailor content specifically for you:
+          </span>
+        </span>
+      </span>
+    </legend>
+
+    
+
+    
+
+  
+    <input type="hidden" name="source_signup" value="d1-mod-conv-dt" id="conversion-module-thank-you-source_signup" />
+  
+    <input type="hidden" name="run_through_id" id="conversion-module-thank-you-run_through_id" />
+  
+    <input type="hidden" name="email" id="conversion-module-thank-you-email" />
+  
+
+  
+    
+
+<div class="conversion-module-signup-form-full_name form-group">
+  <label
+    class="conversion-module-signup-form-label control-label"
+    for="conversion-module-thank-you-full_name"
+  >
+    Full Name
+  </label>
+  
+    <input id="conversion-module-thank-you-full_name" type="text" placeholder="" class="form-control input-lg" name="full_name" />
+  
+</div>
+
+  
+
+  
+    
+
+<div class="conversion-module-signup-form-agency_department form-group">
+  <label
+    class="conversion-module-signup-form-label control-label"
+    for="conversion-module-thank-you-agency_department"
+  >
+    Agency/Department
+  </label>
+  
+    <select id="conversion-module-thank-you-agency_department" placeholder="" class="form-control input-lg" name="agency_department">
+<option value="" selected="selected">--select--</option>
+<option class="agency-department-military-branch" value="Air Force">Air Force</option>
+<option class="agency-department-military-branch" value="Army">Army</option>
+<option class="agency-department-military-branch" value="Coast Guard">Coast Guard</option>
+<option class="agency-department-military-branch" value="Navy">Navy</option>
+<option class="agency-department-military-branch" value="Marines">Marines</option>
+<option class="agency-department-federal-government" value="Department of Agriculture">Department of Agriculture</option>
+<option class="agency-department-federal-government" value="Department of Commerce">Department of Commerce</option>
+<option class="agency-department-federal-government" value="Department of Education">Department of Education</option>
+<option class="agency-department-federal-government" value="Department of Energy">Department of Energy</option>
+<option class="agency-department-federal-government" value="EPA">EPA</option>
+<option class="agency-department-federal-government" value="Executive Office of the President/Vice President">Executive Office of the President/Vice President</option>
+<option class="agency-department-federal-government" value="GSA">GSA</option>
+<option class="agency-department-federal-government" value="Department of Defense">Department of Defense</option>
+<option class="agency-department-federal-government" value="Department of HHS">Department of HHS</option>
+<option class="agency-department-federal-government" value="Department of Homeland Security">Department of Homeland Security</option>
+<option class="agency-department-federal-government" value="Department of HUD">Department of HUD</option>
+<option class="agency-department-federal-government" value="Department of Interior">Department of Interior</option>
+<option class="agency-department-federal-government" value="Judiciary Branch">Judiciary Branch</option>
+<option class="agency-department-federal-government" value="Office of the Secretary of Defense">Office of the Secretary of Defense</option>
+<option class="agency-department-federal-government" value="Department of Justice">Department of Justice</option>
+<option class="agency-department-federal-government" value="Department of Labor">Department of Labor</option>
+<option class="agency-department-federal-government" value="Legislative Branch">Legislative Branch</option>
+<option class="agency-department-federal-government" value="NASA">NASA</option>
+<option class="agency-department-federal-government" value="OMB">OMB</option>
+<option class="agency-department-federal-government" value="OPM">OPM</option>
+<option class="agency-department-federal-government" value="SSA">SSA</option>
+<option class="agency-department-federal-government" value="Department of State">Department of State</option>
+<option class="agency-department-federal-government" value="Department of Transportation">Department of Transportation</option>
+<option class="agency-department-federal-government" value="Department of Treasury">Department of Treasury</option>
+<option class="agency-department-federal-government" value="USPS">USPS</option>
+<option class="agency-department-federal-government" value="Department of Veterans Affairs">Department of Veterans Affairs</option>
+<option class="agency-department-federal-government" value="Other Agency">Other Agency</option>
+<option class="agency-department-state-and-local" value="Government Association">Government Association</option>
+<option class="agency-department-state-and-local" value="County">County</option>
+<option class="agency-department-state-and-local" value="Municipal">Municipal</option>
+<option class="agency-department-state-and-local" value="Higher Education">Higher Education</option>
+<option class="agency-department-state-and-local" value="K-12 Education">K-12 Education</option>
+<option class="agency-department-state-and-local" value="Special District">Special District</option>
+<option class="agency-department-state-and-local" value="State">State</option>
+</select>
+  
+</div>
+
+  
+
+  
+    
+
+<div class="conversion-module-signup-form-job_function form-group">
+  <label
+    class="conversion-module-signup-form-label control-label"
+    for="conversion-module-thank-you-job_function"
+  >
+    Job Function
+  </label>
+  
+    <select id="conversion-module-thank-you-job_function" placeholder="" class="form-control input-lg" name="job_function">
+<option value="" selected="selected">--select--</option>
+<option value="Agency Leadership">Agency Leadership</option>
+<option value="Business &amp; Operations">Business &amp; Operations</option>
+<option value="Technology Management">Technology Management</option>
+<option value="Financial/Contract Management">Financial/Contract Management</option>
+<option value="Human Resource Management">Human Resource Management</option>
+<option value="Sales &amp; Marketing">Sales &amp; Marketing</option>
+<option value="Other">Other</option>
+</select>
+  
+</div>
+
+  
+
+  
+    
+
+<div class="conversion-module-signup-form-phone form-group">
+  <label
+    class="conversion-module-signup-form-label control-label"
+    for="conversion-module-thank-you-phone"
+  >
+    Phone number
+  </label>
+  
+    <input id="conversion-module-thank-you-phone" type="text" placeholder="" class="form-control input-lg" name="phone" />
+  
+</div>
+
+  
+
+  
+    
+
+<div class="conversion-module-signup-form-state_and_zip form-group">
+  <label
+    class="conversion-module-signup-form-label control-label"
+    for="conversion-module-thank-you-state_and_zip_0"
+  >
+    Zip code
+  </label>
+  
+    <input id="conversion-module-thank-you-state_and_zip_0" placeholder="" type="text" name="state_and_zip_0" class="form-control input-lg" /><input id="conversion-module-thank-you-state_and_zip_1" placeholder="" type="hidden" name="state_and_zip_1" class="form-control input-lg" />
+  
+</div>
+
+  
+
+
+
+    
+    
+
+    <div class="conversion-module-signup-form-submit form-group">
+      <button class="conversion-module-signup-form-submit-btn btn btn-default" type="submit">
+        <span class="conversion-module-signup-form-submit-text">
+          <span class="conversion-module-signup-form-submit-arrow"></span>
+          Submit
+        </span>
+      </button>
+    </div>
+
+    <a class="conversion-module-signup-form-link" href="/about/privacy-policy/" target="_blank">View Privacy Policy</a>
+
+  </fieldset>
+</form>
+
+      
+    </div>
+    
+  </div>
+</div>
+
+  
+
+
+	
+
+  
+    
+  
+    <script
+  src="//ak.sail-horizon.com/onsite/personalize.v0.0.4.min.js"
+  type="text/javascript"
+   data-sailthru-setup="true" 
+></script>
+  
+  <script type="text/javascript">
+    $(function() {
+      GEMG.Flyin.init();
+      GEMG.SPM.init('site-defenseone', ["defenseone_article_flyin"]);
+    });
+  </script>
+
+  
+
+  <script type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+
+
+  
+  
+    <!-- Google Code for Remarketing Tag -->
+<!--
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+-->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 962442471;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962442471/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+</noscript>
+    
+      <script type="text/javascript">
+_linkedin_data_partner_id = "41412";
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+    
+  
+
+  <!-- audience pixels -->
+<script type='text/javascript'>
+  var axel = Math.random() + '';
+  var a = axel * 10000000000000;
+  document.write('<img src="http://pubads.g.doubleclick.net/activity;dc_iu=/617/DFPAudiencePixel;ord=' + a + ';dc_seg=135766090?" width=1 height=1 border=0/>');
+</script>
+<noscript>
+  <img src="http://pubads.g.doubleclick.net/activity;dc_iu=/617/DFPAudiencePixel;ord=1;dc_seg=135766090?" width=1 height=1 border=0/>
+</noscript>
+
+
+  <script>
+  
+    GEMG.GPT.body.init();
+  
+  </script>
+
+
+  
+<script type="text/javascript">
+$(function() {
+  GEMG.SessionCoach.init("http://shared.govexec.com", false);
+});
+</script>
+
+
+
+</body>
+</html>
